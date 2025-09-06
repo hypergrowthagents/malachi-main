@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MalachiRose_resume_02-16-21"
+              "title": "Claude_Deep Reseach_Key Accomplishments"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for MalachiRose_resume_02-16-21"
+              "title": "Backlinks for Claude_Deep Reseach_Key Accomplishments"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from MalachiRose_resume_02-16-21"
+              "title": "Outgoing links from Claude_Deep Reseach_Key Accomplishments"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MalachiRose_resume_02-16-21"
+              "title": "Outline of Claude_Deep Reseach_Key Accomplishments"
             }
           }
         ]
@@ -171,13 +171,14 @@
   },
   "active": "115f68da5cea67cd",
   "lastOpenFiles": [
-    "Projects/Resume_Refresh/MAVAN_Accomplishments/Initial_LinkedIn_Analysis.md",
+    "Projects/Resume_Refresh/MAVAN_Accomplishments/Test_Note.md",
     "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+    "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
+    "Projects/Resume_Refresh/MAVAN_Accomplishments/Initial_LinkedIn_Analysis.md",
     "Projects/Resume_Refresh/MAVAN_Accomplishments/ChatGPT_Deep Research_Key Accomplishments.docx",
     "Projects/Resume_Refresh/Current_Resume/Malachi Rose_Linkedin Profile_09-05-25.pdf",
     "Projects/Resume_Refresh/Current_Resume/Malachi Rose_Linkedin Profile.pdf",
     "Untitled.md",
-    "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
     "Obsidian_Claude Code Best Practices.md",
     "References/Obsidian_Claude Code Best Practices.md",
     "Index.md",
