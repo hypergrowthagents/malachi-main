@@ -27,6 +27,12 @@
   - [[Projects/Resume_Refresh/Drafts_Iterations/]] - Resume version control
   - [[Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
 
+- **[[Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
+  - [[Projects/Content_Creation/Content_Clippings/]] - Articles and resources to transform
+  - [[Projects/Content_Creation/Style_References/]] - Examples of preferred writing styles
+  - [[Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
+  - [[Projects/Content_Creation/Published_Archive/]] - Archive of published content
+
 ### 🤖 AI Assistant Tools
 - **[[.claude/CLAUDE.md]]** - Personal assistant constitution
 - **[[.claude/commands/]]** - Custom workflow commands
@@ -34,6 +40,11 @@
   - [[.claude/commands/resume-helper]] - Resume improvement workflows
   - [[.claude/commands/company-research]] - Target company analysis
   - [[.claude/commands/mavan-accomplishments]] - Experience capture
+
+### 🧠 Specialized Sub-Agents
+- **[[.claude/commands/linkedin-content-creator]]** - Transform clippings into LinkedIn content
+- **[[.claude/commands/interview-intelligence-coach]]** - Company research + interview preparation  
+- **[[.claude/commands/agent-development-lab]]** - AI agent concept development and management
 
 ### 🏗️ System Resources
 - **[[Templates/]]** - Note templates for consistency

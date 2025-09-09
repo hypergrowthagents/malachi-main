@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Malachi Mavan Accomplishment Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Claude_Deep Reseach_Key Accomplishments"
+              "title": "Malachi Mavan Accomplishment Notes"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Malachi Mavan Accomplishment Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Claude_Deep Reseach_Key Accomplishments"
+              "title": "Backlinks for Malachi Mavan Accomplishment Notes"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Malachi Mavan Accomplishment Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Claude_Deep Reseach_Key Accomplishments"
+              "title": "Outgoing links from Malachi Mavan Accomplishment Notes"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+                "file": "Projects/Resume_Refresh/MAVAN_Accomplishments/Malachi Mavan Accomplishment Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Claude_Deep Reseach_Key Accomplishments"
+              "title": "Outline of Malachi Mavan Accomplishment Notes"
             }
           }
         ]
@@ -171,8 +171,18 @@
   },
   "active": "115f68da5cea67cd",
   "lastOpenFiles": [
-    "Projects/Resume_Refresh/MAVAN_Accomplishments/Test_Note.md",
+    "Projects/Content_Creation/Style_Calibration_Guide.md",
+    "Templates/Published_Content_Archive_Template.md",
+    "Templates/Content_Clipping_Template.md",
+    "Projects/Content_Creation/README.md",
+    "Projects/Content_Creation/Style_References",
+    "Projects/Content_Creation/Published_Archive",
+    "Projects/Content_Creation/Drafts_In_Progress",
+    "Projects/Content_Creation/Content_Clippings",
+    "Projects/Content_Creation",
     "Projects/Resume_Refresh/MAVAN_Accomplishments/Claude_Deep Reseach_Key Accomplishments.md",
+    "Projects/Resume_Refresh/MAVAN_Accomplishments/Malachi Mavan Accomplishment Notes.md",
+    "Projects/Resume_Refresh/MAVAN_Accomplishments/Test_Note.md",
     "Projects/Resume_Refresh/Current_Resume/MalachiRose_resume_02-16-21.md",
     "Projects/Resume_Refresh/MAVAN_Accomplishments/Initial_LinkedIn_Analysis.md",
     "Projects/Resume_Refresh/MAVAN_Accomplishments/ChatGPT_Deep Research_Key Accomplishments.docx",
@@ -188,11 +198,6 @@
     "Templates/Accomplishment_Capture_Template.md",
     "Templates/Accomplishment_Capture_Template.md.tmp.23877.1757111248742",
     "Templates/Daily_Note_Template.md",
-    "Projects/Resume_Refresh/Target_Companies",
-    "Projects/Resume_Refresh/MAVAN_Accomplishments",
-    "Projects/Resume_Refresh/Interview_Prep",
-    "Projects/Resume_Refresh/Drafts_Iterations",
-    "Projects/Resume_Refresh/Current_Resume",
-    "Projects/Resume_Refresh"
+    "Projects/Resume_Refresh/Target_Companies"
   ]
 }
