@@ -19,6 +19,16 @@
 - **Current Month**: [[Daily/2025/]]
 - **Templates**: [[Templates/Daily_Note_Template]]
 
+### ✅ Task Management
+- **[[Tasks/Master_Dashboard]]** - Central task prioritization and daily planning
+- **[[Tasks/Professional_Todos]]** - Work-related tasks and projects
+- **[[Tasks/Personal_Todos]]** - Life management and personal tasks
+- **[[Tasks/Backlog/]]** - Ideas and future task repository
+  - [[Tasks/Backlog/AI_Agent_Ideas]] - AI development backlog
+  - [[Tasks/Backlog/Content_Ideas]] - Content creation pipeline
+  - [[Tasks/Backlog/Business_Ideas]] - Business development opportunities
+  - [[Tasks/Backlog/Learning_Resources]] - Knowledge acquisition pipeline
+
 ### 🚀 Active Projects
 - **[[Projects/Resume_Refresh/]]** - Career positioning for AI startups
   - [[Projects/Resume_Refresh/Current_Resume/]] - Resume versions and drafts
@@ -52,6 +62,9 @@
   - [[Templates/Accomplishment_Capture_Template]] - Achievement documentation
   - [[Templates/Company_Research_Template]] - Company analysis format
   - [[Templates/Project_Brief_Template]] - Project planning structure
+  - [[Templates/Quick_Task_Capture_Template]] - Rapid task entry format
+  - [[Templates/Daily_Planning_Template]] - Time blocking and prioritization
+  - [[Templates/Weekly_Review_Template]] - Weekly planning and retrospective
 - **[[TAGS.md]]** - Comprehensive tagging strategy and rules
 - **[[References/]]** - External materials and resources
 
@@ -130,6 +143,12 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 - Agent development: `tag:#agent-idea`
 - Business strategy: `tag:#business-strategy`
 
+### Task Management
+- Today's tasks: `tag:#today AND tag:#to-do`
+- Quick wins available: `tag:#quick-win AND tag:#to-do`
+- Blocked items: `tag:#blocked`
+- Backlog items: `tag:#backlog-item`
+
 ---
 
 ## 🎯 Future Project Areas
@@ -152,11 +171,22 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 
 ## 📞 Quick Actions & Shortcuts
 
+### Daily Operations
 - **New Daily Note**: Use Daily_Note_Template
+- **Plan Today**: Use Daily_Planning_Template
+- **Quick Task Capture**: Use Quick_Task_Capture_Template
+- **Master Dashboard**: [[Tasks/Master_Dashboard]] for prioritization
+
+### Project & Content
 - **Capture Accomplishment**: Use Accomplishment_Capture_Template
 - **Research Company**: Use Company_Research_Template  
 - **Plan Project**: Use Project_Brief_Template
+- **Weekly Review**: Use Weekly_Review_Template
+
+### AI Assistant
 - **Get AI Help**: Use custom commands in .claude/commands/
+- **Task Prioritization**: Ask Claude to review Master_Dashboard
+- **Daily Planning**: Request time blocking assistance
 
 ---
 

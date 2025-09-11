@@ -39,6 +39,14 @@ This document defines the comprehensive tagging system for the Obsidian vault. C
 - `#deployment-ready` - Approved and ready for implementation/publication
 - `#completed` - Fully finished and delivered
 
+**Task-Specific Status Tags:**
+- `#today` - Tasks planned for today
+- `#this-week` - Tasks planned for this week
+- `#blocked` - Tasks waiting on external dependencies
+- `#quick-win` - Tasks taking 15-30 minutes
+- `#multi-day` - Tasks requiring multiple work sessions
+- `#long-term` - Strategic initiatives with extended timelines
+
 **Usage Rules:**
 - Only ONE status tag per note/item
 - Update status tags as work progresses
@@ -61,6 +69,13 @@ This document defines the comprehensive tagging system for the Obsidian vault. C
 - `#agent-idea` - AI agent concepts and development plans
 - `#business-strategy` - New business development and planning
 - `#interview-prep` - Interview questions, talking points, preparation
+
+**Task Management Types:**
+- `#task-list` - Active todo lists and task management notes
+- `#backlog-item` - Ideas and tasks stored for future consideration
+- `#daily-planning` - Daily task prioritization and time blocking
+- `#weekly-review` - Weekly planning and retrospective notes
+- `#task-template` - Reusable formats for task capture and planning
 
 ### 4. Context Tags
 
@@ -120,6 +135,11 @@ This document defines the comprehensive tagging system for the Obsidian vault. C
 - Find all MAVAN accomplishments: `tag:#accomplishment AND tag:#mavan-experience`
 - Current active projects: `tag:#in-progress`
 - Content creation opportunities: `tag:#content-idea AND tag:#to-do`
+- Today's tasks: `tag:#today AND tag:#to-do`
+- Quick wins available: `tag:#quick-win AND tag:#to-do`
+- Blocked items needing attention: `tag:#blocked`
+- All task management notes: `tag:#task-list OR tag:#daily-planning OR tag:#weekly-review`
+- Backlog items ready for promotion: `tag:#backlog-item AND tag:#high-priority`
 
 ## Tag Evolution & Maintenance
 
