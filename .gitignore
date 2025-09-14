@@ -1,0 +1,7 @@
+# System ignores
+.DS_Store
+\.obsidian/workspace.json
+\.obsidian/workspace-mobile.json
+# Optional plugin caches (can be re-created)
+\.obsidian/plugins/*/data.json
+\.obsidian/**/cache.json
