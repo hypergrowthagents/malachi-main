@@ -20,14 +20,23 @@
 - **Templates**: [[Templates/Daily_Note_Template]]
 
 ### ✅ Task Management
-- **[[Tasks/Master_Dashboard]]** - Central task prioritization and daily planning
-- **[[Tasks/Professional_Todos]]** - Work-related tasks and projects
-- **[[Tasks/Personal_Todos]]** - Life management and personal tasks
-- **[[Tasks/Backlog/]]** - Ideas and future task repository
-  - [[Tasks/Backlog/AI_Agent_Ideas]] - AI development backlog
-  - [[Tasks/Backlog/Content_Ideas]] - Content creation pipeline
-  - [[Tasks/Backlog/Business_Ideas]] - Business development opportunities
-  - [[Tasks/Backlog/Learning_Resources]] - Knowledge acquisition pipeline
+How tasks work:
+- Capture tasks where you work:
+  - In project notes under 01_Projects/
+  - In area hub notes under 02_Areas/
+  - In Daily notes under Daily/
+- Dashboards:
+  - [[Daily/Master_Tasks]] - Daily triage (Today/Waiting/Quick Wins)
+  - [[Tasks/Master_Dashboard]] - Weekly planning and prioritization
+- Lists:
+  - [[Tasks/Professional_Todos]] - Work-related tasks and projects
+  - [[Tasks/Personal_Todos]] - Life management and personal tasks
+- Backlog:
+  - [[Tasks/Backlog/]] - Ideas and future task repository
+    - [[Tasks/Backlog/AI_Agent_Ideas]] - AI development backlog
+    - [[Tasks/Backlog/Content_Ideas]] - Content creation pipeline
+    - [[Tasks/Backlog/Business_Ideas]] - Business development opportunities
+    - [[Tasks/Backlog/Learning_Resources]] - Knowledge acquisition pipeline
 
 ### 🚀 Active Projects
 - **[[Projects/Resume_Refresh/]]** - Career positioning for AI startups
@@ -66,7 +75,7 @@
   - [[Templates/Daily_Planning_Template]] - Time blocking and prioritization
   - [[Templates/Weekly_Review_Template]] - Weekly planning and retrospective
 - **[[TAGS.md]]** - Comprehensive tagging strategy and rules
-- **[[References/]]** - External materials and resources
+- **[[03_Resources/]]** - Evergreen references and resources
 
 ---
 
