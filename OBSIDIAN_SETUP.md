@@ -337,3 +337,65 @@ Slash commands to update (after plan approval)
 Notes
 - Keep it simple: only add dates/priority when it truly changes scheduling/selection.
 - Queries can evolve—start with the Master view and one Project/Area view; expand later.
+
+---
+
+# Mobile Capture Workflow (Late-Night Brainstorming)
+
+Goal: Zero-friction capture on Obsidian Mobile with automated organization the next morning.
+
+## Capture Process (Mobile - Nighttime)
+Simple 2-field capture when ideas strike:
+
+**Title**: Brief descriptive name
+**Description**: 2-3 sentence capture of the idea/thought
+
+**Drop Location**: `Daily/YYYY-MM-DD.md` (or quick capture inbox)
+- No need to think about organization at night
+- Focus purely on capturing the essence before it's lost
+
+## Processing Workflow (Desktop - Morning)
+Using `/daily-assistant` or `/weekly-chief-of-staff` commands:
+
+1. **Scan captured items** from previous day's daily notes
+2. **Auto-categorize** using Claude's understanding of PARA structure:
+   - Ideas → Appropriate 02_Areas/ folder based on content type
+   - Tasks → Daily/Master_Tasks.md with proper tags and due dates
+   - Projects → Create new folder in 01_Projects/ if substantial
+   - Resources → 03_Resources/ for reference materials
+
+3. **Apply GTD processing**:
+   - Add context tags (#ctx/mac, #ctx/phone)
+   - Set priority levels (⏫ high, none default, ⏬ low)
+   - Estimate time (⏳ 30min)
+   - Assign to areas (#area/Business_Development)
+
+## Sub-Agent Integration
+The **vault-organizer** agent can automatically:
+- Process overnight captures during morning planning
+- Suggest optimal placement in PARA structure
+- Create proper links and tags based on content analysis
+- Move items to appropriate locations with confirmations
+
+## Command Integration
+- `/daily-assistant` - Includes capture processing in morning routine
+- `/weekly-chief-of-staff` - Reviews and organizes accumulated captures
+- Custom `/process-captures` command for dedicated capture processing
+
+## Template for Mobile Capture
+```markdown
+# Late Night Capture - {{date:YYYY-MM-DD}}
+
+## Quick Ideas
+- **[Idea Title]**: Brief description and context
+- **[Another Idea]**: What sparked this thought
+
+## Tasks to Process
+- [ ] [Task description]
+- [ ] [Another task with rough context]
+
+## Resources Found
+- **[Resource Name]**: Where to file and why it's useful
+```
+
+This approach separates capture (emotion/creativity) from organization (logic/systems), ensuring ideas flow freely while maintaining systematic organization.

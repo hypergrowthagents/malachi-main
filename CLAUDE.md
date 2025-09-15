@@ -116,50 +116,43 @@ When collaborating on strategic business matters:
 vault/
 ├── .claude/                    # Your operational files and commands
 ├── Daily/2025/                # Daily notes and scheduling
-├── Projects/                   # All major initiatives (Resume, Agents, Business, Content)
-├── Templates/                  # Consistent note formats
-├── References/                 # External materials and resources
+├── 01_Projects/               # All active initiatives
+├── 02_Areas/                  # Ongoing responsibilities (see OBSIDIAN_SETUP.md)
+├── 03_Resources/              # Evergreen references
+├── 04_Archives/               # Completed/inactive
+├── Templates/                 # Consistent note formats
 ├── Index.md                   # Central navigation hub
 └── TAGS.md                    # Tagging strategy and rules
 ```
 
-## Key Workflows
+Always reference TAGS.md for current tagging rules and OBSIDIAN_SETUP.md for PARA+GTD structure and processes.
 
-### Administrative & Operational Support
-- **Daily Planning**: Optimize schedules and prioritize tasks based on energy and constraints
-- **Project Coordination**: Track progress, manage deadlines, and maintain organization
-- **Documentation**: Create consistent notes, capture accomplishments, and maintain templates
-- **Process Improvement**: Streamline workflows and eliminate inefficiencies
+---
 
-### Strategic Business Partnership
-*Engaged for high-level business collaboration and strategic thinking*
-- **Market Analysis**: Provide insights on market trends, competitive landscape, and opportunities
-- **Business Model Validation**: Help test assumptions and validate new business concepts
-- **Growth Strategy**: Apply proven growth frameworks to new initiatives and career positioning
-- **Risk Assessment**: Identify potential challenges and mitigation strategies
-- **Resource Optimization**: Suggest efficient approaches to maximize ROI on time and effort
+## Critical Safety Rules - MANDATORY FOR ALL AGENTS
 
-### Resume Development
-- Focus on MAVAN VP of Growth accomplishments (employee #1, growth marketing agency, fractional CMO/CGO, AI strategy)
-- Target both general audience and hypergrowth AI startups
-- Position experience through entrepreneurial and scaling lens
-- Maintain version control through Drafts_Iterations folder
+### Calendar Operations Safety
+- **NEVER use calendar write operations** without explicit "DELETE/MODIFY APPROVED" confirmation
+- **Calendar deletions require typed confirmation**: "DELETE [event name] CONFIRMED"
+- **All calendar operations must show before/after state** for user review
+- **Rube MCP calendar tools are SUGGEST-ONLY** unless explicitly authorized per operation
+- **Default assumption**: Calendar operations are read-only analysis and suggestions
 
-### Project Management
-- Break complex initiatives into manageable tasks with clear status tracking
-- Prevent context bleed between projects while maintaining shared context for daily todos
-- Use templates for consistency across similar note types
-- *Apply startup methodologies (MVP approach, rapid iteration, data-driven decisions) when in Executive Partner mode*
+### Required Approval Format for Calendar Changes
+```
+PROPOSED CALENDAR CHANGES:
+BEFORE: [Current calendar state]
+CHANGES:
+- ADD: [New event details]
+- MODIFY: [Event X from Y to Z]
+- DELETE: [Event to remove]
+AFTER: [Resulting calendar state]
 
-### Content & Brand Building
-- Support daily content creation for LinkedIn presence
-- Help develop "building in public" narrative around AI agent development
-- Cross-reference content ideas with ongoing projects and expertise areas
-- *Apply thought leadership principles and strategic market positioning when in Executive Partner mode*
+Type "CALENDAR CHANGES APPROVED" to proceed, or "MODIFY" to adjust.
+```
 
-## Integration & Sync
-- **iCloud sync**: Vault optimized for Mac and iPhone access
-- **GitHub integration**: Version control, backup, and remote task assignment via issues
-- **Cross-platform consistency**: Ensure seamless experience across devices
-
-Always reference TAGS.md for current tagging rules and update it as the system evolves. Maintain Index.md as the central navigation point for quick access to all areas of the vault.
+### Memory and Accountability Standards
+- **All commitments and goals must be tracked** and followed up on
+- **Daily progress must be logged** for accountability
+- **Patterns and optimizations must be captured** for continuous improvement
+- **No lost tasks or forgotten commitments** - everything gets recorded in PARA structure

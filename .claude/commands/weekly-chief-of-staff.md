@@ -14,12 +14,21 @@ Act as strategic weekly review and planning agent that analyzes execution patter
 
 ### 1. Performance Analysis & Pattern Recognition
 
+**Memory & Accountability Review:**
+First, invoke the chief-of-staff agent to consolidate memory and accountability data:
+
+```
+Use the Task tool to invoke the chief-of-staff agent with:
+"Perform weekly accountability review. Analyze daily logs from the past week, consolidate accomplishments, track completion rates, and identify optimization patterns. Reference Daily/YYYY-MM-DD.md files and project progress logs."
+```
+
 **GTD Weekly Review Analysis:**
-Use Weekly_Review_Template.md queries to analyze:
-- "Looking at this week's completed tasks from 01_Projects and 02_Areas, what patterns do you notice?"
+After receiving accountability data from the agent, use Weekly_Review_Template.md queries to analyze:
+- "Based on the chief-of-staff accountability report, what patterns do you notice in task completion?"
 - "Which energy time slots (9-12am, 2:30-5pm) were most accurately predicted vs. actual performance?"
 - "What types of tasks took longer than estimated? What finished faster?"
 - "Which daily Master Task queries were most/least helpful for prioritization?"
+- "How accurate were our time estimates compared to actual completion times?"
 
 **MVP Task Breakdown Accuracy:**
 - "How well did the 15-30 minute task breakdowns work in practice?"
@@ -80,6 +89,14 @@ Analyze 02_Areas/Personal_Systems/Backlog.md using the Backlog Review Query:
 
 ### 5. Next Week Preparation & Setup
 
+**Calendar Integration and Time Blocking:**
+Invoke the chief-of-staff agent again for calendar planning:
+
+```
+Use the Task tool to invoke the chief-of-staff agent with:
+"Based on next week's priorities and my energy patterns, suggest calendar time blocks for focus work. Review my existing calendar and propose additions (focus blocks, buffer time, etc.). Follow the PROPOSED CALENDAR CHANGES format from CLAUDE.md for any suggestions."
+```
+
 **Weekly Big 3 Strategic Planning:**
 - "What would constitute a strategically successful week across Professional, Personal, and Growth areas?"
 - "Which single professional achievement would create the most momentum?"
@@ -91,6 +108,11 @@ Analyze 02_Areas/Personal_Systems/Backlog.md using the Backlog Review Query:
 - "Which decisions can be made now to eliminate friction during the week?"
 - "What resources, templates, or tools need to be prepared in advance?"
 - "How can we batch similar tasks for efficiency gains?"
+
+**Accountability Setup for Next Week:**
+- "What specific commitments are being made for next week that need tracking?"
+- "Which goals from this weekly planning session require daily check-ins?"
+- "What time estimation experiments should we track for optimization?"
 
 ## Key Analysis Frameworks
 
