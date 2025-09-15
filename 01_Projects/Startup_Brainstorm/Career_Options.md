@@ -1,0 +1,10 @@
+## Current Path Options:
+
+These are the paths I'm currently considering for my next role:
+
+- **Path 1: Take a full time job**
+	- Find a hypergrowth AI or software company to land a full time job leading growth. Build AI & growth capabilities there from the "inside". Company should offer meaningful upside and responsibilities - a senior growth leadership role.
+- **Path 2: Take on contract/part time roles as a consultant or adviser**
+	- Build AI capabilities that solve key problems companies have in the industry right now and package them as productized offers that I can sell into. These capabilities would support me, and I would still be the front-facing offer. It would essentially allow them to hire a growth leader who can solve these problems and steer the ship, powered by AI behind the scenes. This would be a great way for me to build out these capabilities and test them in the real world instead of building them in a theoretical box and hoping that people will buy them because I can gauge product-market fit this way. 
+- **Path 3: Build a new AI agent platform company (SaaS or agency)**
+	- I'd buy a new domain like augmentgrowth.ai. I would establish probably an LLC to start in California to be able to separate this as a real business. I would announce publicly what I'm working on. I would build out a front-end website, might be simple, that can explain the mission of what I'm doing. And I would use it as a means to get into new discussions with people who might be interested in working with me for me or hiring me to gauge interest in this. I can parlay this new agent platform into either initial consulting gigs to test it out as well as add them into a website that has a front-end where people can access it. So as I'm building these they're not just hidden on the back end but I can expose them to customers for a subscription and it's a way for me to build up recurring revenue stream. 

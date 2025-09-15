@@ -5,8 +5,18 @@ Help optimize daily schedule and task prioritization through consultative questi
 
 ## Execution Process
 
-### 1. Daily Context Gathering
-Ask the following questions to understand today's landscape:
+### 1. Morning Accountability Check-In
+
+**Previous Day Review (invoking chief-of-staff agent):**
+First, invoke the chief-of-staff agent for accountability:
+
+```
+Use the Task tool to invoke the chief-of-staff agent with:
+"Perform morning accountability check-in. Review yesterday's commitments from daily notes, check what was completed vs. planned, and identify any carry-over items. Provide completion summary and patterns observed."
+```
+
+**Daily Context Gathering:**
+After receiving accountability data, ask the following questions:
 
 **Schedule & Constraints:**
 - What time did you start working today, and what's your hard stop time?
@@ -15,7 +25,8 @@ Ask the following questions to understand today's landscape:
 - What's your energy level like today? (High energy/focus work vs. lighter tasks)
 
 **Priority Assessment:**
-- What's the ONE most important thing you need to accomplish today?
+- Based on yesterday's uncompleted items, what needs to carry forward?
+- What's the ONE most important NEW thing you need to accomplish today?
 - Are there any urgent deadlines or time-sensitive tasks?
 - Which of your key focus areas needs attention today: Resume work, Agent development, Business strategy, Content creation, or Interview prep?
 - What's been weighing on your mind or causing stress that we should address?
@@ -52,11 +63,18 @@ Check for connections across projects:
 
 ## Output Format
 After gathering responses:
-1. Create the daily note with populated sections
-2. Provide 2-3 time blocking options for consideration
-3. Suggest 1 LinkedIn content idea tied to the day's work
-4. Identify any cross-connections between projects
-5. Ask one follow-up question to refine the plan
+1. **Accountability Summary**: Present results from chief-of-staff check-in
+2. **Create the daily note** with populated sections including carry-over items
+3. **Time Blocking Suggestions**: Invoke chief-of-staff agent for calendar suggestions:
+   ```
+   Use the Task tool to invoke the chief-of-staff agent with:
+   "Based on today's priorities and existing calendar, suggest optimal time blocks for focus work. Follow the PROPOSED CALENDAR CHANGES format for any calendar suggestions."
+   ```
+4. **Provide 2-3 time blocking options** for consideration
+5. **Suggest 1 LinkedIn content idea** tied to the day's work
+6. **Identify any cross-connections** between projects
+7. **Evening Accountability Setup**: "What specific commitments are you making for today that need tracking?"
+8. **Ask one follow-up question** to refine the plan
 
 ## Tags to Apply
 - #daily-planning #consultation #schedule-optimization #{{date:YYYY-MM-DD}}

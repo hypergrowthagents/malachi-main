@@ -6,9 +6,9 @@
 
 ### Quick Actions
 - [ ] **Today's Priorities** → [[Daily/2025/]]
-- [ ] **Resume Review** → [[Projects/Resume_Refresh/]]
-- [ ] **MAVAN Accomplishments** → [[Projects/Resume_Refresh/MAVAN_Accomplishments/]]
-- [ ] **Target Companies** → [[Projects/Resume_Refresh/Target_Companies/]]
+- [ ] **Resume Review** → [[01_Projects/Resume_Refresh/]]
+- [ ] **MAVAN Accomplishments** → [[01_Projects/Resume_Refresh/MAVAN_Accomplishments/]]
+- [ ] **Target Companies** → [[01_Projects/Resume_Refresh/Target_Companies/]]
 
 ---
 
@@ -20,28 +20,40 @@
 - **Templates**: [[Templates/Daily_Note_Template]]
 
 ### ✅ Task Management
-- **[[Tasks/Master_Dashboard]]** - Central task prioritization and daily planning
-- **[[Tasks/Professional_Todos]]** - Work-related tasks and projects
-- **[[Tasks/Personal_Todos]]** - Life management and personal tasks
-- **[[Tasks/Backlog/]]** - Ideas and future task repository
-  - [[Tasks/Backlog/AI_Agent_Ideas]] - AI development backlog
-  - [[Tasks/Backlog/Content_Ideas]] - Content creation pipeline
-  - [[Tasks/Backlog/Business_Ideas]] - Business development opportunities
-  - [[Tasks/Backlog/Learning_Resources]] - Knowledge acquisition pipeline
+How tasks work:
+- Capture tasks where you work:
+  - In project notes under 01_Projects/
+  - In area hub notes under 02_Areas/
+  - In Daily notes under Daily/
+- Dashboards:
+  - [[Daily/Master_Tasks]] - Daily triage (Today/Waiting/Quick Wins)
+- Area-specific tasks:
+  - [[02_Areas/Career_Development/Professional_Todos]] - Work-related tasks and projects
+  - [[02_Areas/Personal_Systems/Personal_Todos]] - Life management and personal tasks
+- Area-specific backlogs:
+  - [[02_Areas/AI_and_Technical_Skills/AI_Agent_Ideas]] - AI development backlog
+  - [[02_Areas/Content_and_Brand/Content_Ideas]] - Content creation pipeline
+  - [[02_Areas/Business_Development/Business_Ideas]] - Business development opportunities
+  - [[02_Areas/AI_and_Technical_Skills/Learning_Resources]] - Knowledge acquisition pipeline
+  - [[02_Areas/Personal_Systems/Backlog]] - General someday/maybe items
 
 ### 🚀 Active Projects
-- **[[Projects/Resume_Refresh/]]** - Career positioning for AI startups
-  - [[Projects/Resume_Refresh/Current_Resume/]] - Resume versions and drafts
-  - [[Projects/Resume_Refresh/MAVAN_Accomplishments/]] - Experience documentation
-  - [[Projects/Resume_Refresh/Target_Companies/]] - AI startup research
-  - [[Projects/Resume_Refresh/Drafts_Iterations/]] - Resume version control
-  - [[Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
+- **[[01_Projects/Resume_Refresh/]]** - Career positioning for AI startups
+  - [[01_Projects/Resume_Refresh/Current_Resume/]] - Resume versions and drafts
+  - [[01_Projects/Resume_Refresh/MAVAN_Accomplishments/]] - Experience documentation
+  - [[01_Projects/Resume_Refresh/Target_Companies/]] - AI startup research
+  - [[01_Projects/Resume_Refresh/Drafts_Iterations/]] - Resume version control
+  - [[01_Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
 
-- **[[Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
-  - [[Projects/Content_Creation/Content_Clippings/]] - Articles and resources to transform
-  - [[Projects/Content_Creation/Style_References/]] - Examples of preferred writing styles
-  - [[Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
-  - [[Projects/Content_Creation/Published_Archive/]] - Archive of published content
+- **[[01_Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
+  - [[01_Projects/Content_Creation/Content_Clippings/]] - Articles and resources to transform
+  - [[01_Projects/Content_Creation/Style_References/]] - Examples of preferred writing styles
+  - [[01_Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
+  - [[01_Projects/Content_Creation/Published_Archive/]] - Archive of published content
+
+- **[[01_Projects/Startup_Brainstorm/]]** - Business development and strategy
+  - [[01_Projects/Startup_Brainstorm/AugmentGrowth_Vision]] - Company vision and strategy
+  - [[01_Projects/Startup_Brainstorm/Network_Interviews/]] - Market research and validation
 
 ### 🤖 AI Assistant Tools
 - **[[.claude/CLAUDE.md]]** - Personal assistant constitution
@@ -52,13 +64,23 @@
   - [[.claude/commands/mavan-accomplishments]] - Experience capture
 
 ### 🧠 Specialized Sub-Agents
+- **[[.claude/agents/chief-of-staff]]** - Memory, accountability, and calendar optimization
+- **[[.claude/agents/vault-organizer]]** - PARA structure maintenance and organization
+- **[[.claude/agents/linkedin-profile-optimizer]]** - LinkedIn profile enhancement
+- **[[.claude/agents/resume-optimizer]]** - Resume improvement and targeting
+
+### 🛠️ Workflow Commands
+- **[[.claude/commands/daily-assistant]]** - Morning planning with accountability check-ins
+- **[[.claude/commands/weekly-chief-of-staff]]** - Weekly review and strategic planning
 - **[[.claude/commands/linkedin-content-creator]]** - Transform clippings into LinkedIn content
-- **[[.claude/commands/interview-intelligence-coach]]** - Company research + interview preparation  
+- **[[.claude/commands/interview-intelligence-coach]]** - Company research + interview preparation
 - **[[.claude/commands/agent-development-lab]]** - AI agent concept development and management
 
 ### 🏗️ System Resources
 - **[[Templates/]]** - Note templates for consistency
   - [[Templates/Daily_Note_Template]] - Daily planning format
+  - [[Templates/Daily_Accountability_Template]] - Daily commitment tracking
+  - [[Templates/Weekly_Accountability_Template]] - Weekly performance analysis
   - [[Templates/Accomplishment_Capture_Template]] - Achievement documentation
   - [[Templates/Company_Research_Template]] - Company analysis format
   - [[Templates/Project_Brief_Template]] - Project planning structure
@@ -66,7 +88,9 @@
   - [[Templates/Daily_Planning_Template]] - Time blocking and prioritization
   - [[Templates/Weekly_Review_Template]] - Weekly planning and retrospective
 - **[[TAGS.md]]** - Comprehensive tagging strategy and rules
-- **[[References/]]** - External materials and resources
+- **[[03_Resources/]]** - Evergreen references and resources
+- **[[02_Areas/Personal_Systems/Productivity_Insights]]** - Optimization patterns database
+- **[[02_Areas/Personal_Systems/Weekly_Reviews/]]** - Weekly accountability reports
 
 ---
 
@@ -175,7 +199,7 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 - **New Daily Note**: Use Daily_Note_Template
 - **Plan Today**: Use Daily_Planning_Template
 - **Quick Task Capture**: Use Quick_Task_Capture_Template
-- **Master Dashboard**: [[Tasks/Master_Dashboard]] for prioritization
+- **Master Dashboard**: [[Daily/Master_Tasks]] for daily prioritization
 
 ### Project & Content
 - **Capture Accomplishment**: Use Accomplishment_Capture_Template

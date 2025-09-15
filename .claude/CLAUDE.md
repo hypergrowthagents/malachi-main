@@ -126,33 +126,3 @@ vault/
 ```
 
 Always reference TAGS.md for current tagging rules and OBSIDIAN_SETUP.md for PARA+GTD structure and processes.
-
----
-
-## Critical Safety Rules - MANDATORY FOR ALL AGENTS
-
-### Calendar Operations Safety
-- **NEVER use calendar write operations** without explicit "DELETE/MODIFY APPROVED" confirmation
-- **Calendar deletions require typed confirmation**: "DELETE [event name] CONFIRMED"
-- **All calendar operations must show before/after state** for user review
-- **Rube MCP calendar tools are SUGGEST-ONLY** unless explicitly authorized per operation
-- **Default assumption**: Calendar operations are read-only analysis and suggestions
-
-### Required Approval Format for Calendar Changes
-```
-PROPOSED CALENDAR CHANGES:
-BEFORE: [Current calendar state]
-CHANGES:
-- ADD: [New event details]
-- MODIFY: [Event X from Y to Z]
-- DELETE: [Event to remove]
-AFTER: [Resulting calendar state]
-
-Type "CALENDAR CHANGES APPROVED" to proceed, or "MODIFY" to adjust.
-```
-
-### Memory and Accountability Standards
-- **All commitments and goals must be tracked** and followed up on
-- **Daily progress must be logged** for accountability
-- **Patterns and optimizations must be captured** for continuous improvement
-- **No lost tasks or forgotten commitments** - everything gets recorded in PARA structure
