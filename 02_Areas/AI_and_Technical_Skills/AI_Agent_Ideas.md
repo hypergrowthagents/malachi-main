@@ -9,8 +9,11 @@
 ### 💡 Raw Ideas
 *Initial concepts that need research and validation*
 
-- [ ] 
-- [ ] 
+- [ ] **Claude Code SDK Marketing/Growth Agent**: Companies building non-coding products on Claude Code SDK - explore marketing/growth agent powered by Claude Code
+  - Research what companies are doing with Claude Code SDK
+  - Brainstorm specific agent ideas for marketing/growth use cases
+  - Evaluate technology fit and level of effort
+- [ ]
 - [ ] 
 
 ### 🔍 Research Phase

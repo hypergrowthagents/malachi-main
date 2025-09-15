@@ -42,7 +42,7 @@ How tasks work:
   - [[01_Projects/Resume_Refresh/Current_Resume/]] - Resume versions and drafts
   - [[01_Projects/Resume_Refresh/MAVAN_Accomplishments/]] - Experience documentation
   - [[01_Projects/Resume_Refresh/Target_Companies/]] - AI startup research
-  - [[01_Projects/Resume_Refresh/Drafts_Iterations/]] - Resume version control
+  - [[04_Archives/Resume_Refresh_Drafts_2025/]] - Resume version control (archived)
   - [[01_Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
 
 - **[[01_Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
@@ -51,9 +51,9 @@ How tasks work:
   - [[01_Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
   - [[01_Projects/Content_Creation/Published_Archive/]] - Archive of published content
 
-- **[[01_Projects/Startup_Brainstorm/]]** - Business development and strategy
-  - [[01_Projects/Startup_Brainstorm/AugmentGrowth_Vision]] - Company vision and strategy
-  - [[01_Projects/Startup_Brainstorm/Network_Interviews/]] - Market research and validation
+- **[[01_Projects/AugmentGrowth/]]** - Business development and strategy
+  - [[01_Projects/AugmentGrowth/AugmentGrowth_Vision]] - Company vision and strategy
+  - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market research and validation
 
 ### 🤖 AI Assistant Tools
 - **[[.claude/CLAUDE.md]]** - Personal assistant constitution

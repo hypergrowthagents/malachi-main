@@ -1,3 +1,4 @@
+## Email Response
 
 Hey Malachi,
 
@@ -30,3 +31,7 @@ For more complex, scalable solutions, I’ll use **Replit (with Supabase, APIs,
 The “sweet spot” for client handoff is still low-code orchestration platforms + clear documentation + human-in-the-loop adoption. That way they can build confidence and maintain the workflows without needing engineers.
 
 Would love to keep jamming on this. Sounds like you’re at an inflection point where you could either spin up something of your own or slot into a team that needs a growth + AI leader. Either way, happy to swap notes and share what I’m seeing from both the venture and consulting sides.
+
+## Brainstorm
+
+Questions for Jeff

@@ -380,7 +380,24 @@ The **vault-organizer** agent can automatically:
 ## Command Integration
 - `/daily-assistant` - Includes capture processing in morning routine
 - `/weekly-chief-of-staff` - Reviews and organizes accumulated captures
-- Custom `/process-captures` command for dedicated capture processing
+- `/process-captures` - **IMPLEMENTED**: Dedicated capture processing with vault-organizer agent integration
+
+### Enhanced Mobile Capture System (IMPLEMENTED)
+**Mobile Capture Location**: `Daily/Inbox.md` (single persistent inbox)
+**Processing Command**: `/process-captures`
+
+**Workflow:**
+1. Mobile quick capture → Daily/Inbox.md
+2. Morning: Run `/process-captures`
+3. Vault-organizer agent analyzes content and suggests PARA placement
+4. Review and approve suggestions
+5. Items move to appropriate locations, inbox cleared
+
+**Benefits:**
+- Single persistent inbox vs. date-specific daily notes
+- Vault-organizer agent provides sophisticated categorization
+- Approval gates maintain control while automating organization
+- Zero mobile friction, full desktop automation
 
 ## Template for Mobile Capture
 ```markdown
