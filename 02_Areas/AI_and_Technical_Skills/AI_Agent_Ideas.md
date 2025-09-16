@@ -1,6 +1,8 @@
 # AI Agent Ideas Backlog
 
 > **Repository for AI agent concepts and development pipeline**
+>
+> **NOTE**: This is legacy idea capture. New agent development now follows the [[02_Areas/AI_Agent_Development/Morpheus_Platform_Framework]] (created 2025-09-16). Consider migrating relevant ideas to the new system.
 
 ---
 
@@ -13,7 +15,7 @@
   - Research what companies are doing with Claude Code SDK
   - Brainstorm specific agent ideas for marketing/growth use cases
   - Evaluate technology fit and level of effort
-- [ ]
+- [ ] **Firecrawl AI Search Readiness Analyzer** - Agent that analyzes websites for AI search optimization readiness using Firecrawl's new feature. Helps businesses ensure their sites are properly structured and optimized for AI-powered search engines and crawlers. #agent-idea #backlog #growth-strategy-gtm #conversion-rate-optimization
 - [ ] 
 
 ### 🔍 Research Phase
@@ -45,7 +47,7 @@
 - [ ] 
 
 ### 🎯 Marketing & Growth Agents  
-- [ ] 
+- [ ] **Firecrawl AI Search Readiness Analyzer** - Evaluate and optimize website AI search readiness for augment agents #agent-idea #backlog 
 
 ### 🔧 Productivity & Workflow Agents
 - [ ] 
@@ -58,7 +60,7 @@
 ## 🏷️ Effort Estimation
 
 ### Quick Wins (1-2 days)
-- [ ] 
+- [ ] **Firecrawl AI Search Readiness** - Integrate existing Firecrawl API for site analysis #agent-idea #quick-win 
 
 ### Medium Projects (1-2 weeks)
 - [ ] 
@@ -77,7 +79,7 @@
 - [ ] 
 
 ### APIs to Investigate
-- [ ] 
+- [ ] **Firecrawl AI Search API** - New feature for analyzing website AI search readiness 
 
 ---
 
@@ -111,5 +113,5 @@
 
 ---
 
-*Last Updated: {{date:YYYY-MM-DD}}*
+*Last Updated: 2025-01-15*
 *Next Review: Weekly during backlog grooming*
