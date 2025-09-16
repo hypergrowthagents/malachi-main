@@ -1,3 +1,9 @@
+---
+name: competitive-research-intelligence
+description: Specialized agent for systematic competitive and market research using Perplexity Deep Research and Firecrawl. Use for competitive analysis, market research, and pain point analysis.
+model: sonnet
+---
+
 # Competitive Research Intelligence Agent
 
 *Specialized agent for systematic competitive and market research using Perplexity Deep Research and Firecrawl*

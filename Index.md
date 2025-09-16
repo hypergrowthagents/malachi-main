@@ -45,15 +45,27 @@ How tasks work:
   - [[04_Archives/Resume_Refresh_Drafts_2025/]] - Resume version control (archived)
   - [[01_Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
 
-- **[[01_Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
-  - [[01_Projects/Content_Creation/Content_Clippings/]] - Articles and resources to transform
-  - [[01_Projects/Content_Creation/Style_References/]] - Examples of preferred writing styles
-  - [[01_Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
-  - [[01_Projects/Content_Creation/Published_Archive/]] - Archive of published content
+- **[[02_Areas/Content_and_Brand/Content_Production_System]]** - LinkedIn thought leadership and personal branding (moved to Areas)
+  - [[02_Areas/Content_and_Brand/Content_Production/Content_Clippings/]] - Articles and resources to transform
+  - [[02_Areas/Content_and_Brand/Content_Production/Style_References/]] - Examples of preferred writing styles
+  - [[02_Areas/Content_and_Brand/Content_Production/Drafts_In_Progress/]] - Content being developed
+  - [[02_Areas/Content_and_Brand/Content_Production/Published_Archive/]] - Archive of published content
 
 - **[[01_Projects/AugmentGrowth/]]** - Business development and strategy
   - [[01_Projects/AugmentGrowth/AugmentGrowth_Vision]] - Company vision and strategy
-  - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market research and validation
+  - [[01_Projects/AugmentGrowth/AugmentGrowth_Critique_and_Challenges]] - Strategic analysis and challenges
+  - [[01_Projects/AugmentGrowth/Research/]] - Market research and competitive intelligence
+    - [[01_Projects/AugmentGrowth/Research/Competitive_Intelligence_Synthesis]] - Market positioning insights
+    - [[01_Projects/AugmentGrowth/Research/Traditional_Agency_AI_Integration_Research]] - Agency competitive analysis
+  - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market validation conversations
+
+### 🤖 AI Agent Development & Strategy
+- **[[02_Areas/AI_Agent_Development/]]** - Agent concept development and platform strategy
+  - [[02_Areas/AI_Agent_Development/Morpheus_Platform_Framework]] - **NEW** Comprehensive agent platform framework (2025-09-16)
+  - [[02_Areas/AI_Agent_Development/AI_Agent_Brainstorm_Malachi_9-16-25]] - Original brainstorm session (preserved reference)
+  - [[02_Areas/AI_Agent_Development/AI_Agent_Development_Hub]] - Development coordination
+  - [[02_Areas/AI_Agent_Development/Master_Agent_Registry]] - Agent tracking and status
+  - [[02_Areas/AI_Agent_Development/Agent_Specifications/]] - Individual agent specifications
 
 ### 🤖 AI Assistant Tools
 - **[[.claude/CLAUDE.md]]** - Personal assistant constitution
@@ -164,7 +176,8 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 
 ### Content & Ideas
 - LinkedIn content ideas: `tag:#content-idea`
-- Agent development: `tag:#agent-idea`
+- Agent development: `tag:#agent-development`
+- Morpheus platform: `tag:#morpheus-platform`
 - Business strategy: `tag:#business-strategy`
 
 ### Task Management
@@ -180,9 +193,9 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 *Areas to expand as the vault grows:*
 
 ### Planned Projects
-- **Agent_Ideas_Lab** - AI agent development and testing
-- **New_Business_Strategy** - Fractional services company development  
-- **Content_Creation** - LinkedIn presence and brand building
+- **Morpheus Platform Development** - AI agent development and testing (framework created 2025-09-16)
+- **New_Business_Strategy** - Fractional services company development
+- **Content_Production_Enhancement** - Advanced content systems and automation (building on existing Areas system)
 - **Interview_Pipeline** - Active job search management
 
 ### Potential Expansions

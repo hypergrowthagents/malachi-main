@@ -7,7 +7,7 @@ Transform clipped articles and resources into authentic LinkedIn content that ma
 
 ### 1. Content Discovery & Analysis
 **Scan for New Clippings:**
-- Monitor `Projects/Content_Creation/Content_Clippings/` for new files
+- Monitor `02_Areas/Content_and_Brand/Content_Production/Content_Clippings/` for new files
 - Identify unprocessed clippings (those not marked as "Assigned to linkedin-content-creator agent")
 - Prioritize based on recency and topic relevance
 
@@ -19,7 +19,7 @@ Transform clipped articles and resources into authentic LinkedIn content that ma
 
 ### 2. Voice & Style Alignment
 **Style Reference Integration:**
-- Review examples in `Projects/Content_Creation/Style_References/` folder
+- Review examples in `02_Areas/Content_and_Brand/Content_Production/Style_References/` folder
 - Analyze writing patterns, tone, structure, and engagement techniques
 - Apply stylistic elements that align with your professional brand
 - Maintain authenticity while incorporating effective techniques
@@ -46,7 +46,7 @@ Transform clipped articles and resources into authentic LinkedIn content that ma
 
 ### 4. Duplication Prevention & Content Building
 **Archive Cross-Reference:**
-- Scan `Projects/Content_Creation/Published_Archive/` for similar topics
+- Scan `02_Areas/Content_and_Brand/Content_Production/Published_Archive/` for similar topics
 - Identify previous content themes and angles used
 - Ensure new content builds on rather than repeats previous posts
 - Suggest ways to reference and build upon earlier content
@@ -58,7 +58,7 @@ Transform clipped articles and resources into authentic LinkedIn content that ma
 
 ### 5. Draft Creation & Management
 **Draft Development:**
-- Create content drafts in `Projects/Content_Creation/Drafts_In_Progress/`
+- Create content drafts in `02_Areas/Content_and_Brand/Content_Production/Drafts_In_Progress/`
 - Include multiple format options when applicable
 - Provide rationale for angle and approach chosen
 - Include engagement prediction and optimization suggestions
@@ -82,7 +82,7 @@ Before processing clippings, ask:
 **To Fine-Tune Voice Matching:**
 
 ### Step 1: Style Reference Collection
-Add examples to `Projects/Content_Creation/Style_References/` with this structure:
+Add examples to `02_Areas/Content_and_Brand/Content_Production/Style_References/` with this structure:
 - **File name**: `StyleRef_[AuthorName]_[PostType]_[Date].md`
 - **Content**: Full post text, your analysis of what works, specific techniques to emulate
 

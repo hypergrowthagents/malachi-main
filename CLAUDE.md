@@ -126,3 +126,105 @@ vault/
 ```
 
 Always reference TAGS.md for current tagging rules and OBSIDIAN_SETUP.md for PARA+GTD structure and processes.
+
+## Advanced Tables Integration
+
+### Table Creation Preferences
+When creating or editing tables, ALWAYS use Advanced Tables plugin-compatible format:
+
+**Required Elements:**
+1. **Proper markdown table structure** with clear headers and alignment
+2. **TBLFM formula integration** for calculations using `<!-- TBLFM: formula -->` syntax
+3. **Sample data** to demonstrate functionality
+4. **Appropriate formatting** (`;f0` for integers, `;f2` for decimals, etc.)
+
+**Standard Table Types:**
+
+**Project Tracking:**
+```markdown
+| Project | Budget | Spent | Remaining | Progress |
+|---------|--------|-------|-----------|----------|
+| Project Alpha | 5000 | 1200 | 3800 | 24% |
+| Project Beta | 3000 | 2100 | 900 | 70% |
+| **TOTALS** | 8000 | 3300 | 4700 | 41% |
+
+<!-- TBLFM: @4$2=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$3=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$4=sum(@2..@3);f0 -->
+<!-- TBLFM: @2$4=@2$2-@2$3;f0 -->
+<!-- TBLFM: @3$4=@3$2-@3$3;f0 -->
+<!-- TBLFM: @2$5=(@2$3/@2$2)*100;f0 -->
+<!-- TBLFM: @3$5=(@3$3/@3$2)*100;f0 -->
+```
+
+**Time Tracking:**
+```markdown
+| Task | Estimated (hrs) | Actual (hrs) | Variance | Status |
+|------|----------------|--------------|----------|---------|
+| Research | 8 | 6 | -2 | Complete |
+| Development | 20 | 24 | 4 | Complete |
+| **TOTALS** | 28 | 30 | 2 | |
+
+<!-- TBLFM: @4$2=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$3=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$4=sum(@2..@3);f0 -->
+<!-- TBLFM: @2$4=@2$3-@2$2;f0 -->
+<!-- TBLFM: @3$4=@3$3-@3$2;f0 -->
+```
+
+**Financial Tracking:**
+```markdown
+| Category | Budgeted | Actual | Variance | % of Budget |
+|----------|----------|--------|----------|-------------|
+| Marketing | 2000 | 1800 | -200 | 90% |
+| Development | 5000 | 5500 | 500 | 110% |
+| **TOTALS** | 7000 | 7300 | 300 | 104% |
+
+<!-- TBLFM: @4$2=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$3=sum(@2..@3);f0 -->
+<!-- TBLFM: @4$4=sum(@2..@3);f0 -->
+<!-- TBLFM: @2$4=@2$3-@2$2;f0 -->
+<!-- TBLFM: @3$4=@3$3-@3$2;f0 -->
+<!-- TBLFM: @2$5=(@2$3/@2$2)*100;f0 -->
+<!-- TBLFM: @3$5=(@3$3/@3$2)*100;f0 -->
+```
+
+**Post-Creation Instructions:**
+- Always remind user to click "Evaluate Formulas" button in Obsidian toolbar
+- Reference [[03_Resources/Advanced_Tables_Claude_Integration_Guide]] for detailed usage
+- Include appropriate tags and wiki-links based on table context
+
+## Zen MCP Usage Guidelines
+
+### Permission Required Policy
+**ALWAYS confirm with user before invoking any Zen MCP tools** - these tools can be costly to run and should not be used without explicit permission.
+
+**EXCEPTION: If the user explicitly requests Zen MCP tools, proceed immediately without asking for additional permission.**
+
+**Request Permission Pattern:**
+"This task would benefit from [specific Zen MCP tool] for [multiple model perspectives/deep systematic thinking]. This involves multi-model analysis and may incur costs. Should I proceed with [tool name]?"
+
+### When to Use Zen MCP vs Claude Code
+
+**Use Zen MCP when you need:**
+- **Multiple Model Perspectives** - Getting diverse AI viewpoints on decisions (`consensus`)
+- **Super Deep Thinking** - Systematic, multi-step investigation beyond single-model analysis (`thinkdeep`, `planner`)
+- **Cross-Model Validation** - Expert review from different models (`codereview`, `analyze`)
+- **Structured Methodologies** - Formal approaches with multiple validation steps (`debug`, `secaudit`, `tracer`)
+
+**Claude Code handles complex problems perfectly well** - it's not limited to basic tasks. The distinction is about **approach**, not difficulty:
+- **Claude Code**: Single powerful model tackling hard problems efficiently
+- **Zen MCP**: Multiple models or systematic deep-thinking methodologies
+
+### Decision Framework
+
+**Primary Trigger:**
+- **User explicitly asks for Zen MCP** → Use it immediately
+
+**Secondary Considerations:**
+1. **Multiple Perspectives Needed?** Would different model viewpoints add value?
+2. **Systematic Deep Analysis?** Does this need formal multi-step investigation?
+3. **Cross-Validation Required?** Would expert validation from other models help?
+4. **Methodological Approach?** Does this benefit from structured frameworks?
+
+**Remember: Claude Code excels at complex problems. Only suggest Zen MCP when multiple models or systematic deep thinking provides unique value.**

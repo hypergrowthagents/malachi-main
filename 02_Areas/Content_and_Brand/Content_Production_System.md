@@ -1,6 +1,10 @@
-# Content Creation Workflow
+# Content Production System
 
-## Folder Structure
+*Location: 02_Areas/Content_and_Brand/Content_Production/*
+
+This is the ongoing content production system for building thought leadership and personal brand across LinkedIn and other platforms. This system operates continuously as part of ongoing content and brand management responsibilities.
+
+## System Structure
 
 ### Content_Clippings/
 Save articles, resources, and ideas here for the `linkedin-content-creator` agent to process.
@@ -25,7 +29,7 @@ Archive of all published content for reference and avoiding duplication.
 - Includes performance metrics and engagement data when available
 - Used by agent to ensure content variety and build on previous themes
 
-## Content Processing Workflow
+## Content Production Workflow
 
 1. **Save/Clip**: Add articles and resources to Content_Clippings/
 2. **Transform**: Use `/linkedin-content-creator` command to generate drafts
@@ -33,5 +37,11 @@ Archive of all published content for reference and avoiding duplication.
 4. **Publish**: Post to LinkedIn and move to Published_Archive/
 5. **Iterate**: Agent learns from archived content to improve future output
 
+## Related Systems & Files
+- [[Style_Calibration_Guide]] - Writing style guidelines and examples
+- [[.claude/commands/linkedin-content-creator]] - LinkedIn content generation command
+- [[02_Areas/Content_and_Brand/Content_Ideas]] - Content ideation backlog
+- [[02_Areas/Content_and_Brand/Content_and_Brand_Hub]] - Main content area hub
+
 ## Tags
-- #content-creation #linkedin #personal-brand #thought-leadership
+#content-system #linkedin #personal-brand #thought-leadership #ongoing-area #content-production

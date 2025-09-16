@@ -32,6 +32,45 @@ The “sweet spot” for client handoff is still low-code orchestration platform
 
 Would love to keep jamming on this. Sounds like you’re at an inflection point where you could either spin up something of your own or slot into a team that needs a growth + AI leader. Either way, happy to swap notes and share what I’m seeing from both the venture and consulting sides.
 
-## Brainstorm
+## Discussion Topics for Wednesday Call (1pm PT)
 
-Questions for Jeff
+### Core Agenda Items
+
+**1. AugmentGrowth Vision Walkthrough**
+- Present the end-to-end managed growth service concept
+- Get feedback on positioning at the intersection of AI + Growth
+- Discuss market timing and competitive landscape
+
+**2. Market Validation - Managed Service vs. DIY Tools**
+- **Key Hypothesis**: "Companies will trust and value having a growth expert backed by advanced AI systems more than standalone agent products, at least for now"
+- Test assumption: AI agents aren't 100% reliable for major functional needs yet
+- Validate: Clients prefer strategy + implementation + execution + analysis as a package
+- Question: What's Jeff seeing in terms of client preference for managed vs. self-service AI solutions?
+
+**3. Technical Implementation Strategy**
+- How does Jeff handle technical builds for clients?
+- Partnership with Toni or independent tech resources?
+- Best places to find reliable AI implementation talent
+- Tools/platforms working best for client handoffs (n8n, Make.com, Replit, Claude Code)
+
+**4. Market Intelligence Review**
+- Discuss Jeff's insights from his email on AI investment buckets:
+  - Workflow automation (quick wins)
+  - AI transformation (larger budgets, slower adoption)
+  - Talent gap/expertise consulting
+  - AI-enabled services overlay
+- Pain point: "We know AI is important, but don't know where to start"
+
+**5. Partnership Exploration**
+- Scenarios where collaboration could work:
+  - Jeff providing AI technical expertise for Malachi's growth clients
+  - Malachi providing growth/marketing expertise for Jeff's AI clients
+  - Joint AugmentGrowth service development
+  - Referral partnership structure
+
+### Follow-up Questions
+- What's the typical engagement length and budget range for Jeff's AI consulting?
+- Which client verticals are most receptive to AI-enabled growth work?
+- What are the biggest failure points Jeff sees in AI implementation projects?
+
+## Email Response

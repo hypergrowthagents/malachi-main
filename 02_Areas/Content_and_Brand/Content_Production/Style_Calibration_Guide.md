@@ -6,7 +6,7 @@ Instructions for fine-tuning the `linkedin-content-creator` sub-agent to match y
 ## Style Calibration Process
 
 ### Step 1: Collect Style References
-Save 3-5 posts from writers you admire to `Projects/Content_Creation/Style_References/` using this format:
+Save 3-5 posts from writers you admire to `02_Areas/Content_and_Brand/Content_Production/Style_References/` using this format:
 
 **File naming convention**: `StyleRef_[AuthorName]_[PostType]_[Date].md`
 

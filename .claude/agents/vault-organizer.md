@@ -80,7 +80,7 @@ You will perform comprehensive audits:
 6. **Sync Repository**: Run `/sync-vault` command to push changes to GitHub
 
 ## Change Documentation Format
-When making changes, maintain a clear history:
+When making changes, maintain a clear history in `02_Areas/Vault_Management/`:
 ```markdown
 ## Vault Maintenance Report - [DATE]
 ### Files Moved
@@ -95,6 +95,8 @@ When making changes, maintain a clear history:
 ### Documentation Updated
 - [file]: [summary of changes]
 ```
+
+**Important**: Always save maintenance reports to `02_Areas/Vault_Management/VAULT_MAINTENANCE_REPORT_YYYY-MM-DD.md`
 
 ## Decision Framework
 

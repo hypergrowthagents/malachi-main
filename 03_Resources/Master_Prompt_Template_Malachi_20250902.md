@@ -92,3 +92,15 @@ Monthly/usage-based pricing for pre-built agents (e.g., AI UGC creation agent wi
 **Financial Timeline:** Need sustained income within 3-6 months (6 months \= maximum runway)
 **Core Challenge:** Overcome perfectionist tendencies to ship fast and test quickly \- tendency to spend days studying tools/systems vs rapidly working and shipping things that matter
 **Success Indicators:** Landing major consulting contracts, full-time AI company role, or validated agent platform with strong product-market fit
+
+---
+
+## Related Files
+- [[AugmentGrowth_Vision]] - Business vision aligned with this personal strategy
+- [[CLAUDE.md]] - AI assistant configuration based on these preferences
+- [[Strategic_Context]] - Strategic planning aligned with personal goals
+- [[Career_Options]] - Career path analysis
+- [[01_Projects/Resume_Refresh/]] - Career transition execution
+
+## Tags
+#personal-strategy #business-strategy #ai-strategy #career-development #master-prompt #reference #augmentgrowth #fractional-services #accountability #mission-statement
