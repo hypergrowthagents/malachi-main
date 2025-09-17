@@ -1,6 +1,12 @@
 # Master Task Dashboard
 
 > **Central command center for daily prioritization and task management**
+>
+> **⚡ NEW: This vault now uses [cc-sessions](https://github.com/GWUDCAP/cc-sessions) for enhanced task management**
+>
+> **Active tasks are managed in:** `sessions/tasks/` directory
+> **Current task:** Check `.claude/state/current_task.json`
+> **Legacy system:** This file provides overview, but active work uses cc-sessions format
 
 ---
 
@@ -194,14 +200,32 @@ tag includes needs-review
 
 ## 🎪 Claude Assistant Integration
 
-### Daily Planning Prompt
-*Use this when asking Claude to help prioritize your day*
+### CC-Sessions Workflow
+*Primary task management now uses cc-sessions format*
 
+**Create new work:**
+- "Create a task for: [description]"
+- Tasks auto-created in `sessions/tasks/` with proper structure
+
+**Start work:**
+- "Let's work on [task-name]" or "Work on h-augmentgrowth-vision-doc"
+- Claude loads task context and discusses approach
+
+**Implementation:**
+- Say "go ahead" / "run that" / "make it so" / "ship it" to trigger implementation
+- Claude enforces discussion-before-implementation workflow
+
+**Task switching:**
+- Reference tasks by filename (e.g. "h-reddit-pain-point-research-20250916")
+- Context automatically preserved across sessions
+
+### Legacy Task Integration
+*For tasks still in traditional format*
+
+**Daily Planning Prompt:**
 "Based on my current tasks, energy level, and schedule constraints, help me prioritize today's focus items and suggest optimal time blocks for completion."
 
-### Weekly Review Prompt
-*Use this for weekly planning sessions*
-
+**Weekly Review Prompt:**
 "Review my completed tasks and help me plan next week's priorities, considering upcoming deadlines and long-term goals."
 
 ---

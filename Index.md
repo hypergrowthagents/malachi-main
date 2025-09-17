@@ -52,12 +52,17 @@ How tasks work:
   - [[02_Areas/Content_and_Brand/Content_Production/Published_Archive/]] - Archive of published content
 
 - **[[01_Projects/AugmentGrowth/]]** - Business development and strategy
-  - [[01_Projects/AugmentGrowth/AugmentGrowth_Vision]] - Company vision and strategy
-  - [[01_Projects/AugmentGrowth/AugmentGrowth_Critique_and_Challenges]] - Strategic analysis and challenges
-  - [[01_Projects/AugmentGrowth/Research/]] - Market research and competitive intelligence
-    - [[01_Projects/AugmentGrowth/Research/Competitive_Intelligence_Synthesis]] - Market positioning insights
-    - [[01_Projects/AugmentGrowth/Research/Traditional_Agency_AI_Integration_Research]] - Agency competitive analysis
-  - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market validation conversations
+  - **Core Strategic Documents (Updated Sept 2025):**
+    - [[01_Projects/AugmentGrowth/AugmentGrowth_Vision_Draft_2025-09-16]] - Updated strategic vision document
+    - [[01_Projects/AugmentGrowth/AugmentGrowth_Growth_Executive_AI_Positioning_2025-09-16]] - Final positioning framework
+    - [[01_Projects/AugmentGrowth/Growth_Executive_AI_GTM_Framework]] - Complete go-to-market strategy
+    - [[01_Projects/AugmentGrowth/AugmentGrowth_Positioning_Analysis_2025-09-16]] - Positioning development process
+    - [[01_Projects/AugmentGrowth/AugmentGrowth_Critique_and_Challenges]] - Strategic analysis and challenges
+  - **Research & Validation:**
+    - [[01_Projects/AugmentGrowth/Research/]] - Market research and competitive intelligence
+      - [[01_Projects/AugmentGrowth/Research/Competitive_Intelligence_Synthesis]] - Market positioning insights
+      - [[01_Projects/AugmentGrowth/Research/Traditional_Agency_AI_Integration_Research]] - Agency competitive analysis
+    - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market validation conversations
 
 ### 🤖 AI Agent Development & Strategy
 - **[[02_Areas/AI_Agent_Development/]]** - Agent concept development and platform strategy

@@ -308,7 +308,7 @@ Traditional growth marketing agencies are struggling to compete with AI-first ap
 ## Related Files
 - [[Competitive_Intelligence_Synthesis]] - Market positioning strategy
 - [[AugmentGrowth_Critique_and_Challenges]] - Strategic challenges analysis
-- [[AugmentGrowth_Vision]] - Core business vision
+- [[AugmentGrowth_Vision_Draft_2025-09-16]] - Core business vision
 - [[Strategic_Context]] - Strategic planning foundation
 
 ## Tags

@@ -211,7 +211,7 @@
 ## Related Files
 - [[AugmentGrowth_Critique_and_Challenges]] - Strategic challenges analysis
 - [[Traditional_Agency_AI_Integration_Research]] - Traditional agency competitive analysis
-- [[AugmentGrowth_Vision]] - Core business vision
+- [[AugmentGrowth_Vision_Draft_2025-09-16]] - Core business vision
 - [[Strategic_Context]] - Strategic planning foundation
 - [[Market_Opportunity_Synthesis]] - Market analysis
 

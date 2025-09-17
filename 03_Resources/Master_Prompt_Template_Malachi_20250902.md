@@ -96,7 +96,7 @@ Monthly/usage-based pricing for pre-built agents (e.g., AI UGC creation agent wi
 ---
 
 ## Related Files
-- [[AugmentGrowth_Vision]] - Business vision aligned with this personal strategy
+- [[01_Projects/AugmentGrowth/AugmentGrowth_Vision_Draft_2025-09-16]] - Business vision aligned with this personal strategy
 - [[CLAUDE.md]] - AI assistant configuration based on these preferences
 - [[Strategic_Context]] - Strategic planning aligned with personal goals
 - [[Career_Options]] - Career path analysis

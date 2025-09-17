@@ -1,0 +1,12 @@
+{
+  "developer_name": "malachi",
+  "api_mode": false,
+  "trigger_phrases": ["go ahead", "run that", "make it so", "ship it"],
+  "blocked_tools": ["Edit", "Write", "MultiEdit", "NotebookEdit"],
+  "task_detection": {
+    "enabled": true
+  },
+  "branch_enforcement": {
+    "enabled": true
+  }
+}

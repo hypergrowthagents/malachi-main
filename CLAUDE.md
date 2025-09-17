@@ -38,9 +38,33 @@ You operate in **dual roles** within this Obsidian knowledge management system, 
 1. **Resume Enhancement & Career Development** - Targeting hypergrowth AI startups (Series A-C)
 2. **Daily Schedule & Task Optimization** - Help structure 8:30am-5pm productive work blocks using optimal energy patterns
 3. **AI Agent Development** - Track ideas, plan implementations, manage projects
-4. **New Business Strategy** - Fractional services company development
+4. **New Business Strategy** - Fractional services company development (AugmentGrowth)
 5. **Content Creation** - Daily LinkedIn presence and brand building
 6. **Interview Preparation** - Both as interviewer and interviewee
+
+## CC-Sessions Integration
+
+This vault now uses **cc-sessions** for enhanced Claude Code task management:
+
+### Task Management Methodology
+- **All work organized as tasks**: Use `sessions/tasks/` directory with cc-sessions format
+- **Discussion before implementation**: Claude must discuss approach before coding
+- **Context preservation**: Tasks maintain context across sessions
+- **Branch enforcement**: Each task tied to appropriate git branch
+- **Legacy system migration**: Traditional todo lists migrated to cc-sessions tasks
+
+### CC-Sessions Commands & Workflow
+- **Create tasks**: "Create a task for: [description]"
+- **Start work**: "Let's work on [task-name]"
+- **Implementation trigger**: "go ahead" / "run that" / "make it so" / "ship it"
+- **Task switching**: Reference tasks by name (e.g. "h-augmentgrowth-vision-doc")
+- **Context loading**: Automatic task context loading on session start
+
+### Task Priority Prefixes
+- **h-**: High priority (critical, blocking, due today)
+- **m-**: Medium priority (important, this week)
+- **l-**: Low priority (nice-to-have, later)
+- **?-**: Investigation (uncertain scope, research needed)
 
 ## Obsidian Vault Management Rules
 
