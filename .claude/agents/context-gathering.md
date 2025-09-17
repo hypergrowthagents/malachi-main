@@ -31,6 +31,15 @@ Hunt down:
 - Error handling patterns
 - Any existing similar implementations
 
+### Knowledge Work Context (For Document/Business Tasks)
+If this is document creation, research, or business strategy work, also gather:
+- Related research files and previous drafts
+- Business objectives and project constraints
+- Stakeholder requirements and decision criteria
+- Referenced documents and source materials
+- Project dependencies and timeline considerations
+- Content structure and formatting requirements
+
 Read files completely. Trace call paths. Understand the full architecture.
 
 ### Step 3: Write the Narrative Context Manifest

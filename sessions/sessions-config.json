@@ -3,6 +3,13 @@
   "api_mode": false,
   "trigger_phrases": ["go ahead", "run that", "make it so", "ship it"],
   "blocked_tools": ["Edit", "Write", "MultiEdit", "NotebookEdit"],
+  "fluid_work_paths": [
+    "Daily/", "Templates/", "02_Areas/", "03_Resources/",
+    "/notes", "/research", "/brainstorm", "/meeting"
+  ],
+  "strict_enforcement_paths": [
+    "01_Projects/", "/vision-doc", "/financial-plan", "/pitch-deck"
+  ],
   "task_detection": {
     "enabled": true
   },

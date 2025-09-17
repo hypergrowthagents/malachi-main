@@ -134,6 +134,15 @@ if discussion_mode and tool_name == "Bash":
 
 # Block configured tools in discussion mode
 if discussion_mode and tool_name in config.get("blocked_tools", DEFAULT_CONFIG["blocked_tools"]):
+    # Check for fluid work paths (knowledge work exception)
+    file_path = tool_input.get("file_path", "")
+    if file_path:
+        fluid_paths = config.get("fluid_work_paths", [])
+        if any(path in file_path for path in fluid_paths):
+            # Allow fluid knowledge work without discussion
+            sys.exit(0)
+
+    # Continue with existing blocking logic
     print(f"[DAIC: Tool Blocked] You're in discussion mode. The {tool_name} tool is not allowed. You need to seek alignment first.", file=sys.stderr)
     sys.exit(2)  # Block with feedback
 
