@@ -46,7 +46,9 @@
 - [ ] 
 
 #### Development & Automation
-- [ ] 
+- [ ] **Claude Code SDK Documentation** - Advanced agent development patterns and API usage
+- [ ] **CC-Sessions Framework** - Task management system for knowledge work optimization
+- [ ] **Firecrawl API Integration** - Web scraping and AI search readiness analysis 
 
 ### Business Skills
 #### Leadership & Management
