@@ -1,0 +1,2 @@
+- For modern professional note taking, a note is a knowledge building block. A discrete unit of information, interpreted through your unique perspective and stored outside of your head.
+- To know if something is worth capturing, draft a list of the 12 open questions you have (based on Richard Feynman’s famous 12 questions framework) to see if it fits any.

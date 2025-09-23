@@ -126,3 +126,76 @@ vault/
 ```
 
 Always reference TAGS.md for current tagging rules and OBSIDIAN_SETUP.md for PARA+GTD structure and processes.
+
+## Specialized AI Agents
+
+You have access to specialized sub-agents for specific tasks. Use these agents when their expertise matches the task requirements:
+
+### Personal & Operations Agents
+
+**chief-of-staff** - Personal assistant for daily planning and operational excellence
+- **Use for**: Daily scheduling, task prioritization, calendar coordination, energy-optimized time blocking
+- **Best when**: Need help with day-to-day operations, administrative support, or productivity optimization
+- **Energy patterns**: Understands and works with your optimal energy patterns
+
+**logging** - Task consolidation and work log management
+- **Use for**: Context compaction, task completion documentation, work history organization
+- **Best when**: Need to clean up task logs, consolidate work histories, or organize project documentation
+- **Timing**: Use during context compaction or at task completion
+
+**vault-organizer** - Obsidian vault maintenance and organization
+- **Use for**: Vault structure cleanup, file organization, PARA method maintenance
+- **Best when**: After creating multiple files, during weekly maintenance, or when vault feels disorganized
+- **Proactive use**: After completing major projects or initiatives
+
+### Business & Strategy Agents
+
+**business-partner** - Strategic co-founder perspective for business development
+- **Use for**: Business model validation, startup scaling strategies, growth marketing expertise
+- **Best when**: Need strategic business decisions, market analysis, or Series A-C startup scaling advice
+- **Mindset**: Thinks like an equity partner invested in long-term success
+
+**product-marketing-strategist** - Product positioning and go-to-market strategy
+- **Use for**: Product positioning, competitive analysis, go-to-market planning, pricing strategies
+- **Best when**: Developing new products, refining business ideas, or entering new markets
+
+**competitive-research-intelligence** - Market research and competitive analysis
+- **Use for**: Pain point discovery, market landscape mapping, buyer intelligence, competitive positioning
+- **Best when**: Need systematic market research or competitive intelligence gathering
+
+### Career & Professional Development Agents
+
+**resume-optimizer** - Resume optimization for AI startup roles
+- **Use for**: Tailoring resumes for specific job postings, ATS optimization, impact quantification
+- **Best when**: Applying to hypergrowth AI startups (Series A-C), need keyword optimization
+- **Focus**: Maximizing interview callbacks and startup-specific positioning
+
+**linkedin-profile-optimizer** - LinkedIn profile optimization and positioning
+- **Use for**: Profile updates, headline optimization, searchability improvements, experience descriptions
+- **Best when**: Resume updates need to be reflected on LinkedIn, or profile needs strategic repositioning
+- **Timing**: Use after resume updates or when targeting new opportunities
+
+### Development & Technical Agents
+
+**agent-idea-developer** - Develops AI agent concepts and implementation strategies
+- **Use for**: AI agent ideation, implementation planning, technical architecture for agents
+- **Best when**: Brainstorming new agent concepts or planning agent development projects
+- **Focus**: Practical implementation strategies and technical feasibility
+
+### Agent Selection Guidelines
+
+**Choose agents based on:**
+1. **Task complexity** - Use specialized agents for domain-specific work
+2. **Expertise needed** - Match agent specialization to task requirements
+3. **Context** - Consider whether task is operational, strategic, or technical
+4. **Timing** - Some agents (logging, vault-organizer) work best at specific project phases
+
+**Run agents in parallel when:**
+- Tasks are independent and can benefit from different expertise
+- Need multiple perspectives on the same problem
+- Working on related but separate workstreams
+
+**Sequential agent use when:**
+- Output from one agent feeds into another's work
+- Building on previous agent's analysis or recommendations
+- Moving through a workflow that requires staged expertise

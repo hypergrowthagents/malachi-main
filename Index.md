@@ -2,13 +2,13 @@
 
 > **Your Obsidian vault optimized for growth marketing leadership and AI entrepreneurship**
 
-## 🎯 Current Focus: Resume Refresh for AI Startups
+## 🎯 Current Focus: AugmentGrowth Business Development
 
 ### Quick Actions
 - [ ] **Today's Priorities** → [[Daily/2025/]]
-- [ ] **Resume Review** → [[01_Projects/Resume_Refresh/]]
-- [ ] **MAVAN Accomplishments** → [[01_Projects/Resume_Refresh/MAVAN_Accomplishments/]]
-- [ ] **Target Companies** → [[01_Projects/Resume_Refresh/Target_Companies/]]
+- [ ] **Business Plan Development** → [[01_Projects/Create_Business_Plan_for_AugmentGrowth/]]
+- [ ] **Strategic Context** → [[Strategic_Context]]
+- [ ] **Career Development** → [[02_Areas/Career_Development/]]
 
 ---
 
@@ -17,7 +17,7 @@
 ### 🗓️ Daily Management
 - **[[Daily/2025/]]** - Daily notes, scheduling, and task management
 - **Current Month**: [[Daily/2025/]]
-- **Templates**: [[Templates/Daily_Note_Template]]
+- **Templates**: [[Daily_Note_Template]]
 
 ### ✅ Task Management
 How tasks work:
@@ -26,34 +26,44 @@ How tasks work:
   - In area hub notes under 02_Areas/
   - In Daily notes under Daily/
 - Dashboards:
-  - [[Daily/Master_Tasks]] - Daily triage (Today/Waiting/Quick Wins)
+  - [[Master_Tasks]] - Daily triage (Today/Waiting/Quick Wins)
 - Area-specific tasks:
-  - [[02_Areas/Career_Development/Professional_Todos]] - Work-related tasks and projects
-  - [[02_Areas/Personal_Systems/Personal_Todos]] - Life management and personal tasks
+  - [[Professional_Todos]] - Work-related tasks and projects
+  - [[Personal_Todos]] - Life management and personal tasks
 - Area-specific backlogs:
-  - [[02_Areas/AI_and_Technical_Skills/AI_Agent_Ideas]] - AI development backlog
-  - [[02_Areas/Content_and_Brand/Content_Ideas]] - Content creation pipeline
-  - [[02_Areas/Business_Development/Business_Ideas]] - Business development opportunities
+  - [[AI_Agent_Ideas]] - AI development backlog
+  - [[Content_Ideas]] - Content creation pipeline
+  - [[Business_Ideas]] - Business development opportunities
   - [[02_Areas/AI_and_Technical_Skills/Learning_Resources]] - Knowledge acquisition pipeline
-  - [[02_Areas/Personal_Systems/Backlog]] - General someday/maybe items
+  - [[Backlog]] - General someday/maybe items
 
 ### 🚀 Active Projects
-- **[[01_Projects/Resume_Refresh/]]** - Career positioning for AI startups
-  - [[01_Projects/Resume_Refresh/Current_Resume/]] - Resume versions and drafts
-  - [[01_Projects/Resume_Refresh/MAVAN_Accomplishments/]] - Experience documentation
-  - [[01_Projects/Resume_Refresh/Target_Companies/]] - AI startup research
-  - [[04_Archives/Resume_Refresh_Drafts_2025/]] - Resume version control (archived)
-  - [[01_Projects/Resume_Refresh/Interview_Prep/]] - Interview materials
+- **[[01_Projects/Create_Business_Plan_for_AugmentGrowth/]]** - AugmentGrowth business development and strategy
+  - [[Strategic_Context]] - Core strategic foundation
+  - [[01_Projects/Create_Business_Plan_for_AugmentGrowth/Vision/]] - Business vision and positioning
+  - [[01_Projects/Create_Business_Plan_for_AugmentGrowth/Research/]] - Market research and analysis
+  - [[01_Projects/Create_Business_Plan_for_AugmentGrowth/Financials/]] - Financial planning and projections
+  - [[01_Projects/Create_Business_Plan_for_AugmentGrowth/Network_Interviews/]] - Market validation conversations
 
-- **[[01_Projects/Content_Creation/]]** - LinkedIn thought leadership and personal branding
-  - [[01_Projects/Content_Creation/Content_Clippings/]] - Articles and resources to transform
-  - [[01_Projects/Content_Creation/Style_References/]] - Examples of preferred writing styles
-  - [[01_Projects/Content_Creation/Drafts_In_Progress/]] - Content being developed
-  - [[01_Projects/Content_Creation/Published_Archive/]] - Archive of published content
+- **[[Content_Production_System]]** - LinkedIn thought leadership and personal branding (moved to Areas)
+  - [[02_Areas/Content_and_Brand/Content_Production/Content_Clippings/]] - Articles and resources to transform
+  - [[02_Areas/Content_and_Brand/Content_Production/Style_References/]] - Examples of preferred writing styles
+  - [[02_Areas/Content_and_Brand/Content_Production/Drafts_In_Progress/]] - Content being developed
+  - [[02_Areas/Content_and_Brand/Content_Production/Published_Archive/]] - Archive of published content
 
-- **[[01_Projects/AugmentGrowth/]]** - Business development and strategy
-  - [[01_Projects/AugmentGrowth/AugmentGrowth_Vision]] - Company vision and strategy
-  - [[01_Projects/AugmentGrowth/Network_Interviews/]] - Market research and validation
+### 📁 Archived Projects
+- **[[04_Archives/Resume_Refresh/]]** - Career positioning for AI startups (completed Sept 2025)
+  - [[04_Archives/Resume_Refresh/MAVAN_Accomplishments/]] - Experience documentation
+  - [[04_Archives/Resume_Refresh/Target_Companies/]] - AI startup research
+  - [[04_Archives/Resume_Refresh/Interview_Prep/]] - Interview materials
+
+### 🤖 AI Agent Development & Strategy
+- **[[02_Areas/AI_AGENT_DEVELOPMENT/]]** - Agent concept development and platform strategy
+  - [[02_Areas/AI_AGENT_DEVELOPMENT/Morpheus_Agent_Platform_Plan]] - Comprehensive agent platform framework
+  - [[02_Areas/AI_AGENT_DEVELOPMENT/AI_Agent_Brainstorm_Malachi_9-16-25]] - Original brainstorm session
+  - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Backlog_Ideas/AI_Agent_Development_Hub]] - Development coordination
+  - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Backlog_Ideas/Master_Agent_Registry]] - Agent tracking and status
+  - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Specifications/]] - Individual agent specifications
 
 ### 🤖 AI Assistant Tools
 - **[[.claude/CLAUDE.md]]** - Personal assistant constitution
@@ -78,18 +88,18 @@ How tasks work:
 
 ### 🏗️ System Resources
 - **[[Templates/]]** - Note templates for consistency
-  - [[Templates/Daily_Note_Template]] - Daily planning format
-  - [[Templates/Daily_Accountability_Template]] - Daily commitment tracking
-  - [[Templates/Weekly_Accountability_Template]] - Weekly performance analysis
-  - [[Templates/Accomplishment_Capture_Template]] - Achievement documentation
-  - [[Templates/Company_Research_Template]] - Company analysis format
-  - [[Templates/Project_Brief_Template]] - Project planning structure
-  - [[Templates/Quick_Task_Capture_Template]] - Rapid task entry format
-  - [[Templates/Daily_Planning_Template]] - Time blocking and prioritization
-  - [[Templates/Weekly_Review_Template]] - Weekly planning and retrospective
+  - [[Daily_Note_Template]] - Daily planning format
+  - [[Daily_Accountability_Template]] - Daily commitment tracking
+  - [[Weekly_Accountability_Template]] - Weekly performance analysis
+  - [[Accomplishment_Capture_Template]] - Achievement documentation
+  - [[Company_Research_Template]] - Company analysis format
+  - [[Project_Brief_Template]] - Project planning structure
+  - [[Quick_Task_Capture_Template]] - Rapid task entry format
+  - [[Daily_Planning_Template]] - Time blocking and prioritization
+  - [[Weekly_Review_Template]] - Weekly planning and retrospective
 - **[[TAGS.md]]** - Comprehensive tagging strategy and rules
 - **[[03_Resources/]]** - Evergreen references and resources
-- **[[02_Areas/Personal_Systems/Productivity_Insights]]** - Optimization patterns database
+- **[[Productivity_Insights]]** - Optimization patterns database
 - **[[02_Areas/Personal_Systems/Weekly_Reviews/]]** - Weekly accountability reports
 
 ---
@@ -164,7 +174,8 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 
 ### Content & Ideas
 - LinkedIn content ideas: `tag:#content-idea`
-- Agent development: `tag:#agent-idea`
+- Agent development: `tag:#agent-development`
+- Morpheus platform: `tag:#morpheus-platform`
 - Business strategy: `tag:#business-strategy`
 
 ### Task Management
@@ -180,9 +191,9 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 *Areas to expand as the vault grows:*
 
 ### Planned Projects
-- **Agent_Ideas_Lab** - AI agent development and testing
-- **New_Business_Strategy** - Fractional services company development  
-- **Content_Creation** - LinkedIn presence and brand building
+- **Morpheus Platform Development** - AI agent development and testing (framework created 2025-09-16)
+- **New_Business_Strategy** - Fractional services company development
+- **Content_Production_Enhancement** - Advanced content systems and automation (building on existing Areas system)
 - **Interview_Pipeline** - Active job search management
 
 ### Potential Expansions
@@ -199,7 +210,7 @@ tag:#daily-note path:"Daily/2025" sort:file.mtime desc limit:7
 - **New Daily Note**: Use Daily_Note_Template
 - **Plan Today**: Use Daily_Planning_Template
 - **Quick Task Capture**: Use Quick_Task_Capture_Template
-- **Master Dashboard**: [[Daily/Master_Tasks]] for daily prioritization
+- **Master Dashboard**: [[Master_Tasks]] for daily prioritization
 
 ### Project & Content
 - **Capture Accomplishment**: Use Accomplishment_Capture_Template

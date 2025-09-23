@@ -9,7 +9,7 @@
 ### 💭 Raw Ideas
 *Initial concepts that need development*
 
-- [ ] 
+- [ ] Series: Master one product/feature per week and publish a guide for how to leverage it for growth. <10 mins to consume maybe for short form factor, which means rapid editing. Include everything from setup, beginner/advanced tips, mistakes to avoid, optimal use cases. Establish a former that works. At the end of it, I should decide if I’m plugging it into my stack (e.g. does it replace something else I use as a better option). Example: learn replit one week. Do deep research to fill in the initial outline, then flesh out the rest with my own thoughts and experiments.
 - [ ] 
 - [ ] 
 
