@@ -1,55 +1,76 @@
 # Daily Assistant Command
 
 ## Purpose
-Help optimize daily schedule and task prioritization through consultative questioning rather than assumption-based planning.
+Comprehensive daily planning workflow that integrates weekly priorities, calendar management, and continuous learning to optimize productivity and focus.
 
-## Execution Process
+## Enhanced 8-Step Execution Process
 
-### 1. Morning Accountability Check-In
+### 1. Weekly Context Loading
+**Check weekly project priorities first:**
+- Review `00_Inbox/2025/WeeklyProjectPlanning/` for current week's priorities
+- Extract top 3 weekly projects and their deadlines
+- Note any time constraints (e.g., upcoming breaks, travel)
+- Load context about project interdependencies
 
-**Previous Day Review (invoking chief-of-staff agent):**
-First, invoke the chief-of-staff agent for accountability:
+### 2. Accomplishment Review & Accountability
+**Multi-source progress analysis:**
+- Review `00_Inbox/2025/DailyPlanning/` files for previous planning and completion
+- Analyze calendar events from past week to see what actually got done
+- Check for any `@eowrecaps` folder items (end-of-week/day recaps)
+- **Ask accountability questions** unless already answered in recap documents:
+  - "Looking at your planned focus items from [last planning date], what got completed vs. what didn't?"
+  - "What obstacles or insights emerged that we should factor into today's planning?"
 
-```
-Use the Task tool to invoke the chief-of-staff agent with:
-"Perform morning accountability check-in. Review yesterday's commitments from daily notes, check what was completed vs. planned, and identify any carry-over items. Provide completion summary and patterns observed."
-```
+### 3. Current Schedule Analysis
+**Calendar-first approach:**
+- Use **Rube MCP Google Calendar** to review existing calendar commitments
+- Identify available time blocks for deep work
+- Note energy patterns (high-energy: 9am-12pm, 2:30-5pm; low-energy: 12-2:30pm, after 5pm)
+- Check for scheduling conflicts or optimization opportunities
 
-**Daily Context Gathering:**
-After receiving accountability data, ask the following questions:
+### 4. Clarifying Questions & Context Integration
+**Consultative priority refinement:**
+- Integrate weekly priorities with daily capacity
+- Ask about energy levels, constraints, and special considerations
+- Identify the ONE most critical item that must be completed today
+- Address any stress points or mental bandwidth concerns
+- Clarify any new priorities or requests since last planning session
 
-**Schedule & Constraints:**
-- What time did you start working today, and what's your hard stop time?
-- Do you have any scheduled meetings, calls, or appointments today?
-- Are there any personal commitments or constraints I should know about?
-- What's your energy level like today? (High energy/focus work vs. lighter tasks)
+### 5. Optimized Time Blocking Proposal
+**Energy-aligned schedule suggestions:**
+- Propose 2-3 time blocking options that respect energy patterns
+- Align highest-priority work with highest-energy periods
+- Include buffer time and transition periods
+- Suggest specific time slots for deep work vs. administrative tasks
+- **Seek explicit approval** before proceeding to calendar integration
 
-**Priority Assessment:**
-- Based on yesterday's uncompleted items, what needs to carry forward?
-- What's the ONE most important NEW thing you need to accomplish today?
-- Are there any urgent deadlines or time-sensitive tasks?
-- Which of your key focus areas needs attention today: Resume work, Agent development, Business strategy, Content creation, or Interview prep?
-- What's been weighing on your mind or causing stress that we should address?
+### 6. Calendar Integration (One-at-a-Time)
+**Systematic calendar additions:**
+- Once approved, use **Rube MCP Google Calendar** to add time blocks
+- **Critical**: Add calendar events ONE AT A TIME to prevent processing errors
+- Ensure each event includes:
+  - Clear objectives and deliverables
+  - Project folder references
+  - Energy level alignment notes
+- Confirm each calendar addition before proceeding to next
 
-### 2. Daily Note Creation
-Once context is gathered:
-- Create today's daily note using the Daily_Note_Template
-- Populate the "Daily Focus" section with the priority identified
-- Fill in known scheduled items in the Time Blocks table
-- Add specific tasks to relevant Project Check-ins sections
+### 7. Daily Planning Documentation
+**Structured daily note creation:**
+- Create comprehensive daily planning note in `00_Inbox/2025/DailyPlanning/`
+- Include:
+  - Weekly project context (from step 1)
+  - Previous day accountability (from step 2)
+  - Calendar integration confirmations (from step 6)
+  - Success criteria and accountability questions
+  - Links to relevant project folders and resources
+- Format based on established daily planning template structure
 
-### 3. Schedule Optimization
-Based on responses, suggest:
-- Time blocking strategy for deep work vs. admin tasks
-- Optimal timing for different types of work based on energy levels
-- Buffer time for unexpected tasks or overruns
-- Content creation opportunities throughout the day
-
-### 4. Cross-Project Integration
-Check for connections across projects:
-- Can resume work inform today's LinkedIn content?
-- Are there agent development ideas related to current business strategy?
-- Do any accomplishments from yesterday need to be captured for MAVAN documentation?
+### 8. Learning Insights Capture
+**Continuous improvement integration:**
+- Ask: "Based on how yesterday/this week went, what's one insight about your productivity patterns we should remember?"
+- Document insights in `02_Areas/PERSONAL_SYSTEMS/Daily_Planning_Insights.md`
+- Apply learnings to today's planning (e.g., energy patterns, task duration estimates, obstacle patterns)
+- Set up tomorrow's accountability by noting specific commitments being made
 
 ## Example Questions Flow
 

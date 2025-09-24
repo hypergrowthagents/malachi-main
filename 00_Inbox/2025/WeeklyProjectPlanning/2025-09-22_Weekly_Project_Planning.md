@@ -85,6 +85,8 @@
 24. Reach out to Brigit about a potential fractional role OR AI project
 	1. Reach out to Fara to get input on AI offering to help dial it in by 10/7
 	2. Reach out to Fara/Zuben to explore either a growth advisor role or AI PoC project by 10/15
+25. Validate ICP assumptions through customer discovery interviews
+	1. Conduct customer discovery interviews with 15+ seed stage founders to validate AI pain points and pricing assumptions by 10/3
 
 ### Top Priorities This Week:
 

@@ -7,5 +7,6 @@
 - Vishwas*
 - Jeff Way
 - Ed Lee
+- Tim Dalrymple
 
 *Also fits target audience*
