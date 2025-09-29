@@ -9,7 +9,7 @@
 
 - [x] Finish resume formatting/port to final template ✅ 2025-01-12 📅 2025-01-11 ⏫ ⏳ 45min #completed #resume-refresh
 - [x] Secure augmentgrowth.ai domain ✅ 2025-01-12 📅 2025-01-11 ⏫ ⏳ 30min #completed #quick-win #startup-brainstorm
-- [ ] Write AugmentGrowth vision doc v1 📅 2025-01-15 ⏫ ⏳ 90min #high-priority #creative #in-progress #startup-brainstorm 
+- [x] Write AugmentGrowth vision doc v1 📅 2025-01-15 ⏫ ⏳ 90min #high-priority #creative #in-progress #startup-brainstorm 
 
 ---
 

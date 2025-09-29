@@ -1,0 +1,10 @@
+- Summary: I should consider this slightly different approach to building agents and what my pitch could be vs. the Morpheus vision.
+- Idea: instead of building agents that mainly support growth marketing operations (which seems designed to help humans scale growth programs), I could more narrowly focus on building a lead gen/customer acquisition machine.
+- Goal: develop a system that can easily spin up customer acquisition (or lead gen) for any company, scale it, then sell the business.
+- Issues:
+	- I think automated lead gen will turn out to be very competitive space.
+	- Lead gen is also not my strongest skillset - that was more what Fisher was doing, what Joe’s company did.
+- Opportunities:
+	- It’s a lot more focused in terms of what I’d build. If it doesn’t directly contribute to driving users/leads, it gets deprioritized. Things like daily analytics agents would be nice to have rather than must have. Things like scalable landing pages, cvr testing, and creative production and testing become more critical.
+	- The ROI of this model might be easier to prove out. Rather than having to prove an ROI for synthetic creative testing, this system either drives performance or it doesn’t.
+	- Lends itself to pricing based on performance vs retainer.

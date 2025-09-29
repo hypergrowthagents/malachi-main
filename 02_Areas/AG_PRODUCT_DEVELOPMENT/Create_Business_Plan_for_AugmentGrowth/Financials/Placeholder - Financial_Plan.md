@@ -1,3 +1,5 @@
+Note: fill this in as a summary once I have the spreadsheet model done. For easier LLM ingestion
+
 # AugmentGrowth.ai Financial Plan
 
 > **1-2 year revenue projections and business financial modeling**

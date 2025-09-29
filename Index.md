@@ -59,10 +59,10 @@ How tasks work:
 
 ### 🤖 AI Agent Development & Strategy
 - **[[02_Areas/AI_AGENT_DEVELOPMENT/]]** - Agent concept development and platform strategy
-  - [[02_Areas/AI_AGENT_DEVELOPMENT/Morpheus_Agent_Platform_Plan]] - Comprehensive agent platform framework
+  - [[Morpheus_Agent_Platform_Plan]] - Comprehensive agent platform framework
   - [[02_Areas/AI_AGENT_DEVELOPMENT/AI_Agent_Brainstorm_Malachi_9-16-25]] - Original brainstorm session
-  - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Backlog_Ideas/AI_Agent_Development_Hub]] - Development coordination
-  - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Backlog_Ideas/Master_Agent_Registry]] - Agent tracking and status
+  - [[AI_Agent_Development_Hub]] - Development coordination
+  - [[Tracking - Master_Agent_Registry]] - Agent tracking and status
   - [[02_Areas/AI_AGENT_DEVELOPMENT/Agent_Specifications/]] - Individual agent specifications
 
 ### 🤖 AI Assistant Tools

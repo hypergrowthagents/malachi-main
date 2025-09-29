@@ -1,0 +1,707 @@
+{
+  "name": "Auto UGC [LM]",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        416
+      ],
+      "id": "7b45b25c-aca5-4a4a-b022-c0bdd3cae826",
+      "name": "Think"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        624
+      ],
+      "id": "7f1d1460-f539-47eb-8f96-068b6778b350",
+      "name": "GPT",
+      "credentials": {
+        "openAiApi": {
+          "id": "l1L0NI2IavDclquG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.scenes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1616,
+        192
+      ],
+      "id": "b9c4b978-edd7-45ed-8a5b-3cff85f38a0d",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/veo3/fast/image-to-video",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": {{ JSON.stringify($json.video_prompt ?? $json.prompt ?? '') }},\n  \"image_url\": {{ JSON.stringify($items(\"Host Image\")[0]?.json?.url ?? $json.images?.images?.[0]?.url ?? '') }},\n  \"aspect_ratio\": \"9:16\",\n  \"resolution\": \"1080p\"\n}\n",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 3000
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2064,
+        368
+      ],
+      "id": "58826ea6-fe27-4772-bc25-d151c18fb8d6",
+      "name": "Create Video"
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2512,
+        368
+      ],
+      "id": "fd8c8a22-066e-4f0c-bc6d-6a62a9ae9c51",
+      "name": "Get Video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ofQWkjssOcJBogqH",
+          "name": "FAL AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 4,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2288,
+        368
+      ],
+      "id": "fe54827a-be0f-44f6-a611-75a57c46db11",
+      "name": "Wait 2",
+      "webhookId": "98fd0476-1425-4827-909a-9c29dc19480e"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "video.url"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        2736,
+        368
+      ],
+      "id": "47a49b93-b3ee-463f-beba-4b4c37105a3a",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3184,
+        368
+      ],
+      "id": "94eea7c3-b82d-4f3c-a63a-0e0333ae1733",
+      "name": "Wait",
+      "webhookId": "27d7175a-98d2-4958-95e7-9f352ceed340"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"scenes\": [\n    {\n      \"video_prompt\": \"dialogue: ...\\naction: ...\\ncamera: ...\\nemotion: ...\\nvoice_type: ...\\ncharacter: ...\\nsetting: ...\",\n      \"aspect_ratio_video\": \"9:16\",\n      \"model\": \"veo3_fast\"\n    }\n  ]\n}\n",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1248,
+        416
+      ],
+      "id": "5636e021-5c59-4e0c-bab4-1b56e7cfaf8c",
+      "name": "Structured Output 1"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"image_prompt\": \"emotion: ...\\naction: ...\\ncharacter: ...\\nproduct: ...\\nsetting: ...\\ncamera: ...\\nstyle: ...\\ncomposition: ...\\nlighting: ...\\ncolor_palette: ...\\ntypography: ...\\ntext_accuracy: ...\",\n  \"aspect_ratio_image\": \"2:3\"\n}\n",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        448,
+        592
+      ],
+      "id": "c69f1394-b304-4f14-95b7-b9dee72a2693",
+      "name": "Structured Output 2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/ffmpeg-api/merge-videos",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"video_urls\": {{ JSON.stringify($json.url) }}\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2960,
+        368
+      ],
+      "id": "9d8ed4dc-5c15-47b4-ab7b-e28bae970bcb",
+      "name": "Combine Clips",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ofQWkjssOcJBogqH",
+          "name": "FAL AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Combine Clips').first().json.response_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3408,
+        304
+      ],
+      "id": "c6256191-e1d9-4a02-8cc4-1737827e3425",
+      "name": "Get Final Video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ofQWkjssOcJBogqH",
+          "name": "FAL AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4c895d90-e8bd-42cf-ab58-511c85e8c782",
+              "leftValue": "={{ $json.video.url }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3632,
+        368
+      ],
+      "id": "f3beb1e7-a3c2-433d-9f86-d111afd1bfc4",
+      "name": "If 2"
+    },
+    {
+      "parameters": {
+        "formTitle": "Submit Image",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Image",
+              "fieldType": "file"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -224,
+        368
+      ],
+      "id": "ec5f513b-9b53-4377-8f9d-6d155dddda19",
+      "name": "On form submission",
+      "webhookId": "73338cc3-5422-4a32-9a9c-7bbcda608e2d"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://upload.imagekit.io/api/v1/files/upload",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "fileName",
+              "value": "my-file-name.jpg"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "Image"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1280,
+        -144
+      ],
+      "id": "c49c12b8-aff3-4252-b4a0-df6cf60cc4f1",
+      "name": "Host Image",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "cxSBFWewAINMExeR",
+          "name": "ThriveCart"
+        },
+        "httpBasicAuth": {
+          "id": "MfVt9OdFtxFuqhbE",
+          "name": "Image Kit"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1840,
+        368
+      ],
+      "id": "122f79a1-52cc-4a5b-92ab-f94fe7645ea2",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://fal.run/fal-ai/nano-banana/edit",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={\n  \"prompt\": {{ JSON.stringify($json.output.image_prompt) }},\n  \"image_urls\": [ {{ JSON.stringify($items(\"Host Image\")[0].json.url) }} ],\n  \"aspect_ratio\": {{ JSON.stringify($json.aspect_ratio_image ?? \"2:3\") }}\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        816,
+        368
+      ],
+      "id": "d990f7b0-2d4a-4859-bcb3-94d07b8ed27a",
+      "name": "Generate Image",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# Objective\n\nProduce **one** image-generation prompt that follows your system’s guidelines.\n\n# Fidelity Rule\n\nWhen a reference image is provided, **replicate it with exacting accuracy**, with special care to preserve any **on-image text** character-for-character.\n\n---\n\n## Reference Image (do not alter the expression below)\n\n{{ $('Describe Image').first().json.choices[0].message.content }}\n\n---\n\n## Aspect Ratio\n\n9:16\n\n---\n\n## Quality Check\n\nUse the Think tool to double check your output.\n\n---\n\n## Output Requirements\n\nReturn **only the final image prompt** (no commentary, no numbering, no code fences). Include subject, setting, framing, lighting, mood, and any details required to match the reference image precisely—especially its text.\n",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Here’s a fresh, non-derivative rewrite that keeps the same purpose while removing the A-G-E-N-T structure:\n\n---\n\nsystem\\_prompt: |\n\n## SYSTEM: Casual UGC Image Prompt Generator\n\n### Fallback for Sparse Briefs\n\nIf the user's instructions lack detail, default to: place the (product) in a scene with the (character).\n\n---\n\n### Core Directive\n\nInsert the product (or the product shown in the reference image) into **realistic, casual UGC scenes** that look like everyday creator content. Output **image prompts only**—no dialogue, no video scripting.\n\n**Maintain authenticity:**\n\n* Everyday realism; unstaged settings (homes, cars, sidewalks, stores)\n* Phone-shot aesthetic; unpolished and natural\n* Slightly imperfect framing and lighting\n* Candid body language and genuine expressions\n* Visible imperfections allowed (skin texture, flyaway hair, minor clutter)\n* **Preserve all visible product text exactly** (logos, claims, packaging). Never invent claims, numbers, or certifications.\n\n---\n\n### Camera & Framing Guidance\n\nAlways include casual realism cues in the camera description. Choose several of:\n\n* amateur phone snapshot\n* casual selfie\n* slightly off-center framing\n* mild motion blur\n* everyday social post\n* unfiltered, no heavy grading\n* spontaneous composition\n* informal, handheld capture\n\n---\n\n### Safety & IP\n\nDo **not** name copyrighted characters. Describe generically (e.g., “masked hero,” “space adventurer”).\n\n---\n\n### Aspect Ratio\n\nInfer from the user’s request. If unspecified, **default to vertical (2:3)**. Horizontal uses **3:2**.\n\n---\n\n### Output Contract\n\nReturn **only** an object with:\n\\- `image_prompt` → a **stringified YAML** describing the scene (avoid double quotes inside this YAML)\n\\- `aspect_ratio_image` → `\"2:3\"` or `\"3:2\"` (default `\"2:3\"`)\n\nDo not include extra commentary, code fences, or additional keys.\n\n---\n\n### Self-Check\n\nBefore returning, use the Think tool to verify:\n\n* product text fidelity is exact\n* UGC realism cues are present\n* only image content is produced\n* output matches the contract above\n\n---\n\n### Example Output\n\n{\n\"image\\_prompt\": \"action: creator naturally shows product while buckled in driver seat\\ncharacter: infer from reference or user brief; age 21-38 unless specified; ensure inclusive casting when unspecified\\nproduct: ensure packaging and on-pack text are visible and **exact** per reference\\nsetting: parked car interior in daylight; lived-in feel with mild clutter\\ncamera: amateur phone snapshot, casual selfie, slightly off-center framing, mild motion blur, unfiltered\\nstyle: candid UGC; imperfections intact; no heavy retouching\\nlighting: soft daylight through windshield; slight shadow contrast\\nmood: friendly, unscripted, confident\\ntext\\_accuracy: preserve all visible product text exactly; do not invent claims\\nnotes: avoid brand-new showroom look; keep realism\",\n\"aspect\\_ratio\\_image\": \"2:3\"\n}\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        464,
+        368
+      ],
+      "id": "e8398ae4-9421-48f2-84ac-9889f98c249d",
+      "name": "Create Image Prompt"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "chatgpt-4o-latest",
+          "mode": "list",
+          "cachedResultName": "CHATGPT-4O-LATEST"
+        },
+        "text": "=## SYSTEM: Visual Element Extractor\n\n### Core Task\n\nLook at the provided image and identify what the **primary subject(s)** are.\nSubjects may fall into three categories:\n\n* **Objects** (manufactured items, packaging, tools, consumer products)\n* **People** (characters, influencers, everyday individuals)\n* **Mixed** (both appear prominently)\n\n### Output Rules\n\n* Always respond in **structured JSON** format.\n* No commentary, no markdown formatting, no extra text — just the JSON object(s).\n* Include fields exactly as described below.\n\n---\n\n#### If the image subject is an object:\n\n```json\n{\n  \"object_name\": \"(name of the product/item if visible or inferable)\",\n  \"brand\": \"(brand name if visible)\",\n  \"colors\": [\n    {\"hex\": \"#xxxxxx\", \"label\": \"descriptive color name\"}\n  ],\n  \"typography\": \"(short description of visible fonts: serif/sans-serif, bold, thin, etc.)\",\n  \"visual_summary\": \"(1–2 sentences summarizing the object, ignoring background)\"\n}\n```\n\n#### If the image subject is a person:\n\n```json\n{\n  \"person_name\": \"(if identifiable or inferable, otherwise leave null)\",\n  \"colors\": [\n    {\"hex\": \"#xxxxxx\", \"label\": \"descriptive color name\"}\n  ],\n  \"appearance\": \"(description of outfit, accessories, and notable features)\",\n  \"visual_summary\": \"(1–2 sentences summarizing what the person looks like, ignoring background)\"\n}\n```\n\n#### If both objects and people are present:\n\nReturn an array with **both JSON blocks** — one for the object, one for the person.\n\n---\n\n### Constraints\n\n* Ignore background details unrelated to the main subject(s).\n* Never invent brand claims, numbers, or character names.\n* Output must always be valid JSON.\n",
+        "imageUrls": "={{ $json.url }}",
+        "simplify": false,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        224,
+        368
+      ],
+      "id": "9fb55ebe-96c6-4602-8d3c-845f02fccf21",
+      "name": "Describe Image",
+      "credentials": {
+        "openAiApi": {
+          "id": "l1L0NI2IavDclquG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=system\\_prompt: |\n\n## SYSTEM: UGC Video Prompt Builder\n\n### Objective\n\nGenerate **video prompt(s)** that follow these guidelines. Keep outputs concise and production-ready.\n\n---\n\n### Reference Fidelity\n\nIf your prompts depict or recreate elements from a provided reference image, **match them precisely**—especially any **on-image text**.\n\n---\n\n### Dialogue & Content Rules\n\n* Each scene’s dialogue should **flow naturally and continuously** (no disjointed lines).\n* The speaker focuses **only on the product and its benefits** as reasonably inferred from the brand/category:\n\n  * drinks → taste, flavor notes, refreshment, mouthfeel\n  * bags → design, capacity, compartments, comfort, materials\n  * tech → core features, ease of use, reliability, everyday utility\n  * skincare/cosmetics → texture, application, finish, wear\n  * apparel → fit, fabric, versatility, comfort, styling\n* If the brand name is spoken, it may be **mentioned in the first scene only**; avoid repeating it in later scenes.\n* Unless the user explicitly instructs otherwise, the talent **does not open, consume, or actively use** the product; they **present it to camera**.\n\n---\n\n### Scene Count & Duration\n\n* Default to **3 scenes** if the user does not specify a total duration.\n* If a total duration is provided, compute the number of scenes as:\n\n  * **scene\\_count = ceil(total\\_duration\\_seconds / 8)**\n* **Each scene is 8 seconds** long.\n\n---\n\n### Inputs\n\n#### Reference image description (do not alter the expression below)\n\n{{ $('Describe Image').first().json.choices[0].message.content }}\n\n#### Aspect Ratio\n\nInfer from the user brief; if unclear, **default to vertical**.\n\n#### Model\n\nInfer from the user brief; if unclear, **default to `veo3_fast`**.\n\n#### Dialogue Script Style\n\nInfer from the user’s request; if unspecified, **propose a clear, conversational UGC script**.\n\n---\n\n### Output Contract\n\nReturn **only** a single object with:\n\\- `scenes`: an array of scene objects, each containing:\n\\- `duration_sec`: 8\n\\- `framing`: brief shot guidance (e.g., tight selfie, mid-shot in car, handheld)\n\\- `action`: what the talent is doing (presenting, gesturing, showing angles)\n\\- `dialogue`: continuous, natural speech for the scene (no stage directions inside the lines)\n\\- `notes`: optional production cues (lighting/mood/setting)\n\\- `aspect_ratio_video`: \"9:16\" by default unless otherwise inferred\n\\- `model`: the chosen model (default \"veo3\\_fast\")\n\\- `brand_mention_policy`: \"brand name allowed in scene 1 only\"\n\nDo **not** include commentary, code fences, or extra keys.\n\n---\n\n### Quality Check\n\nUse the Think tool to verify:\n\n* reference text fidelity (if shown) is exact,\n* dialogue is continuous and product-focused,\n* the brand is named only in the first scene,\n* scene count matches the duration rule,\n* output adheres to the contract above.",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=system_prompt: |\n  ## SYSTEM PROMPT: UGC-Style Veo3/Veo3_fast Prompt Generator (Video-Only)\n\n  You are a UGC (User-Generated Content) AI agent.  \n  Your task: Take the reference image or the product in the reference image and place it into realistic, casual scenes as if captured by everyday content creators or influencers.  \n\n  All outputs must feel **natural, candid, and unpolished** — avoiding professional or overly staged looks. This means:\n\n    - Everyday realism with authentic, relatable settings\n    - Amateur-quality iPhone photo/video style\n    - Slightly imperfect framing and lighting\n    - Candid poses and genuine expressions\n    - Visible imperfections (blemishes, messy hair, uneven skin)\n    - Real-world environments left as-is (clutter, busy backgrounds)\n\n  We need these videos to look natural and real. So in the prompts, have the Camera parameter always use keywords like these: unremarkable amateur iPhone photos, reddit image, snapchat video, Casual iPhone selfie, slightly uneven framing, Authentic share, slightly blurry, Amateur quality phone photo\n\n  If the dialogue is not provided by the user or you are explicitly asked to create it, generate a casual, conversational line under 150 characters, as if a person were speaking naturally to a friend while talking about the product. Avoid overly formal or sales-like language. The tone should feel authentic, spontaneous, and relatable, matching the UGC style. Use ... to indicate pauses, and avoid special characters like em dashes or hyphens.\n\n\n  A – Ask:\n    Generate **only video generation instructions** for AI models (no image prompts). Infer aspect ratios from vertical/horizontal context; default to vertical if unspecified.\n\n    **Scene count rule:**  \n    - Read the user's requested total video duration and the per-video length (in seconds).  \n    - Calculate the required number of videos by dividing total duration by per-video length, rounding **up** to the nearest integer.  \n    - Output **exactly that many scenes**.  \n    - Never output more or fewer scenes than requested.\n\n  G – Guidance:\n    - Always follow UGC-style casual realism principles listed above.\n    - Ensure diversity in gender, ethnicity, and hair color when applicable. Default to actors in 21 to 38 years old unless specified otherwise.\n    - Use provided scene list when available.\n    - Do not use double quotes in any part of the prompts.\n\n  E – Examples:\n    good_examples:\n      - |\n        {\n          \"scenes\": [\n            {\n              \"video_prompt\": \"dialogue: so tikTok made me buy this... honestly its the best tasting fruit beer in sydney and they donate profits to charity...\\naction: character sits in drivers seat of a parked car, holding the beer can casually while speaking\\ncamera: amateur iphone selfie video, uneven framing, natural daylight\\nemotion: very happy, casual excitement\\ntype: veo3_fast\",\n              \"aspect_ratio_video\": \"9:16\",\n              \"model\": \"veo3_fast\"\n            }\n          ]\n        }\n\n  N – Notation:\n    - Final output is a `\"scenes\"` array at the root level.\n    - The array must contain **exactly `scene_count`** objects, where `scene_count` is the user-calculated number.\n    - Each scene contains:\n      - `video_prompt` → stringified YAML with: dialogue, emotion, voice_type, action, character, setting, camera\n      - `aspect_ratio_video` → \"9:16\" or \"16:9\" (default vertical → 9:16)\n      - `model` → \"veo3\" or \"veo3_fast\"\n\n  T – Tools:\n    - Think Tool: Double-check output for completeness, diversity, adherence to style, and that the number of scenes exactly matches the requested count.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        192
+      ],
+      "id": "edeee244-7530-439e-956e-1f8844621ecd",
+      "name": "Create Video Prompt"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Think": {
+      "ai_tool": [
+        [
+          {
+            "node": "Create Video Prompt",
+            "type": "ai_tool",
+            "index": 0
+          },
+          {
+            "node": "Create Image Prompt",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Video Prompt",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Create Image Prompt",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Structured Output 1",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Structured Output 2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Video": {
+      "main": [
+        [
+          {
+            "node": "Wait 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2": {
+      "main": [
+        [
+          {
+            "node": "Get Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Combine Clips",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Final Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output 1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Create Video Prompt",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output 2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Create Image Prompt",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Clips": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Final Video": {
+      "main": [
+        [
+          {
+            "node": "If 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If 2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Host Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Host Image": {
+      "main": [
+        [
+          {
+            "node": "Describe Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Create Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image": {
+      "main": [
+        [
+          {
+            "node": "Create Video Prompt",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Create Image Prompt": {
+      "main": [
+        [
+          {
+            "node": "Generate Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Describe Image": {
+      "main": [
+        [
+          {
+            "node": "Create Image Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Video Prompt": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "571152b3-4817-485c-b3d5-b49b8e8530a1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "21c5d06e9a2e9af0bdfc9c1e8f894c404d4db78a60c6a307fd7ef94634692e0f"
+  },
+  "id": "ro7owUFVybF746y8",
+  "tags": []
+}

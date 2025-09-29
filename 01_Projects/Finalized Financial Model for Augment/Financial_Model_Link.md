@@ -4,7 +4,7 @@
 **Google Sheets Link**: [Augment Growth Financial Model](https://docs.google.com/spreadsheets/d/1blWsDUwK_s5P2Dcq83Rd0VxLEwPk6FwQ/edit?usp=sharing&ouid=117251155239169650381&rtpof=true&sd=true)
 
 ## Update Requirements
-- [ ] Input new service offerings from [[Service_Offerings.md]]
+- [ ] Input new service offerings from [[Service_Offerings_v1]]
 - [ ] Update pricing tiers based on finalized service structure
 - [ ] Validate revenue projections with client validation feedback
 - [ ] Review 90-day cash flow projections

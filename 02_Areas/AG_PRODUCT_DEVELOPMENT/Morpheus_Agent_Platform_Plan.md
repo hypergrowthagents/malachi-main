@@ -13,7 +13,7 @@ Morpheus (codename) is a modular growth marketing intelligence platform that sta
 
 ## System Architecture: 5 Core Intelligence Systems
 
-### **System 1: Intelligence Engine**
+### **System 1: Analytics Intelligence Engine**
 *Transforms complex marketing data into actionable insights and predictions*
 
 **Tier 1 Agents (1-2 Day Builds):**
@@ -30,8 +30,8 @@ Morpheus (codename) is a modular growth marketing intelligence platform that sta
 7. **Profit Optimization Engine** - Scenario modeling for optimal spend levels and payback analysis
 
 **Tier 4 Agents (2+ Week Builds):**
-8. **Attribution Intelligence** - Advanced multi-touch attribution with lifetime value integration
-9. **Intent Signal Processor** - Data science-powered conversion event optimization and regression analysis
+8. **Intent Signal Processor** - Data science-powered conversion event optimization and regression analysis
+9. **Attribution Intelligence** - Advanced multi-touch attribution with lifetime value integration (this would come much later or likely be solved by a 3rd party analytics tool)
 
 ---
 
@@ -154,6 +154,6 @@ Morpheus (codename) is a modular growth marketing intelligence platform that sta
 ## Related
 - [[AI_Agent_Brainstorm_Malachi_9-16-25]] - Original brainstorm document
 - [[AI_Agent_Development_Hub]] - Agent development coordination
-- [[Master_Agent_Registry]] - Agent tracking and implementation
+- [[Tracking - Master_Agent_Registry]] - Agent tracking and implementation
 - [[Ext_Nexus_Vision]] - Reference platform analysis
 - [[TAGS]] - Tagging strategy and rules

@@ -1,2 +1,15 @@
 - For modern professional note taking, a note is a knowledge building block. A discrete unit of information, interpreted through your unique perspective and stored outside of your head.
 - To know if something is worth capturing, draft a list of the 12 open questions you have (based on Richard Feynman’s famous 12 questions framework) to see if it fits any.
+- Distillation:
+	- highlight the main point of the note
+	- Then highlight the highlights
+	- when you are processing your inbox or taking notes, treat it like writing a summary email to your boss. Get to the point and flag the main takeaways, questions and action items
+	- Layers of distillation
+		- Layer 1: captured notes
+		- Layer 2: bolded passages
+		- Layer 3: highlighted passages 
+			- (just the most interesting of the layer 2 bolding)
+		- Layer 4: executive summary
+			- Optional for just the most rare and actionable material, do layer 4. Do thing you find yourself revising a note again and again
+	- You do these in sequence these to refine the content to make it more useful
+	- don’t capture the entire content of an article. It’s too much info. Instead, link to the source material and copy just the sections that are most interesting or actionable. Make it succinct 

@@ -2,7 +2,71 @@
 **Last Updated: 2025-09-24**
 **Status: #in-progress**
 
-## ICP Definition - Final Synthesis
+## LATEST ICP ITERATION - Bridge Company Hypothesis (v3.0)
+**Updated: 2025-09-24**
+
+### Critical Budget Reality Check
+**Previous Assumption Challenge:** Initial seed-stage targeting ($20K-50K monthly ad spend) requires service prices of $3K-5K monthly, representing **20-33% of marketing budget** - unsustainable for early-stage companies.
+
+**Revised Target: "Bridge Companies"**
+- **Company Stage**: Late seed/Pre-Series A ($3-8M raised, approaching Series A in 6-18 months)
+- **Ad Spend Range**: **$60K-100K monthly** (our $7.5K-10K service = 10-15% of budget)
+- **Team Size**: 10-30 people with 2-5 marketing team members
+- **Decision Maker**: C-level (CEO, COO, CMO) - faster than Series A decision cycles
+- **Revenue Stage**: $3M-8M ARR, proven PMF, scaling for Series A
+
+### Why Bridge Companies Make Sense
+**Budget Capacity**: $7.5K-10K monthly service represents sustainable 10-15% of marketing budget
+**Pain Intensity**: Desperate for growth expertise both pre- and post-Series A fundraising
+**Operational Sophistication**: Have someone capable of supporting external partner vs. earlier stage
+**Competitive Landscape**: Potentially underserved - hard to identify companies "on track for Series A"
+**Natural Expansion**: Percentage-of-spend pricing scales as they grow to Series A and beyond
+
+### Alternative Segment to Explore: AI Operations Overhaul
+**Target Profile**: Series B/C companies ($20M+ raised) with legacy marketing stacks
+- **Budget Range**: $500K+ monthly marketing budgets
+- **Pain Point**: Built marketing operations in pre-AI era, need comprehensive modernization
+- **Service Scope**: Large transformation projects vs. ongoing management
+- **Decision Pressure**: Board-level "implement AI" mandates
+- **Service Value**: $50K-100K transformation projects + ongoing optimization
+
+### Pricing Model Assumptions
+**Bridge Companies**: 10-15% of media spend (industry standard for performance agencies)
+**AI Overhaul**: Fixed project fees + ongoing retainer hybrid
+
+### Next Steps for Validation
+1. **Network Interviews**: Use interview template to validate both segments with 15-20 companies
+2. ~~**Business Partner Consultation**: Assess AI overhaul segment against Morpheus capabilities~~ ✅ *Completed - see [[AI_Overhaul_Segment_Analysis]]*
+3. ~~**Market Research**: Perplexity-based research on segment sizing and competitive landscape~~ ✅ *Completed - see research findings below*
+4. **Internal Validation**: Determine service delivery feasibility for each segment
+
+### Market Research Validation ✅
+**Research Date**: 2025-09-24
+**Source**: [[Bridge_Company_Market_Research_Findings]] *(detailed analysis)*
+
+**Key Findings:**
+- **✅ Market Size Confirmed**: Several thousand late-seed/pre-Series A companies globally each quarter
+- **✅ Budget Capacity Validated**: Target companies typically allocate 10-20% of revenue to marketing
+- **⚠️ Competitive Reality**: Established agencies charge $15K-100K+ monthly retainers
+- **💡 Pricing Opportunity**: Industry standard 10-20% of ad spend supports $10K-15K monthly pricing
+
+**Updated Pricing Assessment:**
+- **Previous assumption**: $7.5K-10K monthly (too conservative)
+- **Market-validated range**: $10K-15K monthly competitive and sustainable
+- **Pricing model**: 10-15% of ad spend + potential $2K-5K management fee
+- **Competitive positioning**: Higher pricing improves market perception vs. discount players
+
+**Strategic Implications:**
+- Bridge company segment is viable and substantial
+- Need strong differentiation beyond "AI-powered" to compete with established players
+- Credibility building essential - start smaller, build portfolio upward
+- Premium positioning at $10K-15K tier aligns with market expectations
+
+---
+
+## Previous ICP Iterations (Historical Context)
+
+### v2.0: ICP Definition - Two-Phase Market Entry Strategy
 
 ### Target Customer Profile: Two-Phase Market Entry Strategy
 
@@ -274,17 +338,9 @@
 - **Secondary**: Cost efficiency vs. hiring 2-3 specialists
 - **Avoid**: Cost-comparison positioning (race to the bottom)
 
-### PRICING STRATEGY RECOMMENDATIONS
+### PRICING CONSIDERATIONS
 
-**Seed Stage Pricing:**
-- **Setup**: $5k-10k (competitive with research benchmarks)
-- **Monthly**: $3k-5k (20-25% of typical $20k ad spend)
-- **Model**: Retainer-based with performance bonuses
-
-**Series A Pricing:**
-- **Setup**: $15k-25k
-- **Monthly**: $8k-12k
-- **Model**: Hybrid (base retainer + performance fees)
+**Note**: Detailed pricing strategy has been moved to dedicated `Pricing_Strategy.md` file to maintain clear separation between ICP definition and revenue modeling.
 
 ### VALIDATED SERVICE MODEL: Done-For-You Focus
 

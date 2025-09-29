@@ -127,6 +127,12 @@ vault/
 
 Always reference TAGS.md for current tagging rules and OBSIDIAN_SETUP.md for PARA+GTD structure and processes.
 
+## Research & Information Guidelines
+**Current Year Context**: 2025 - Always search for current/latest information, not outdated 2024 data
+
+## Tool Usage Guidelines
+**Zen MCP**: Only use when explicitly requested by user or when recommending with approval request - never use autonomously
+
 ## Specialized AI Agents
 
 You have access to specialized sub-agents for specific tasks. Use these agents when their expertise matches the task requirements:
@@ -199,3 +205,53 @@ You have access to specialized sub-agents for specific tasks. Use these agents w
 - Output from one agent feeds into another's work
 - Building on previous agent's analysis or recommendations
 - Moving through a workflow that requires staged expertise
+
+## Daily Planning Workflow Integration
+
+### Command & Agent Coordination
+The `/daily-assistant` command and `chief-of-staff` agent work together to provide comprehensive daily planning:
+
+**Daily Assistant Command (`/daily-assistant`):**
+- Initiates the 8-step daily planning workflow
+- Gathers user context and weekly priorities
+- Coordinates with chief-of-staff agent for execution
+- Manages the overall planning process flow
+
+**Chief-of-Staff Agent:**
+- Provides operational expertise and accountability analysis
+- Executes calendar management via Rube MCP
+- Creates daily planning documentation
+- Captures learning insights for continuous improvement
+
+### Data Sources & Integration Points
+**Primary Planning Inputs:**
+- `00_Inbox/2025/WeeklyProjectPlanning/` - Strategic weekly priorities
+- `00_Inbox/2025/DailyPlanning/` - Historical planning and accountability data
+- Google Calendar (via Rube MCP) - Existing commitments and actual completion patterns
+- `@eowrecaps/` (when available) - End-of-week/day completion summaries
+
+**Learning & Optimization:**
+- `02_Areas/PERSONAL_SYSTEMS/Daily_Planning_Insights.md` - Continuous improvement repository
+- Energy pattern tracking (9am-12pm, 2:30-5pm high-energy periods)
+- Task duration estimation improvements
+- Scheduling optimization patterns
+
+### Calendar-First Approach
+**Implementation Rules:**
+- All approved time blocks must be added to Google Calendar
+- Use Rube MCP to add events **one at a time** to prevent processing errors
+- Calendar serves as the source of truth for accountability tracking
+- Include detailed event descriptions with objectives and project references
+
+### Role Delineation
+**Daily Assistant handles:**
+- Weekly context loading and priority integration
+- User consultation and preference gathering
+- Process flow coordination
+- Learning insight capture initiation
+
+**Chief-of-Staff handles:**
+- Calendar analysis and time block proposals
+- Rube MCP calendar integration execution
+- Daily planning note creation and formatting
+- Accountability analysis and pattern recognition

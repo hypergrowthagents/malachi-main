@@ -8,7 +8,7 @@
 
 ## 🎯 Quick Actions
 
-- **📋 View Portfolio**: [[Master_Agent_Registry]] - Complete agent tracking table
+- **📋 View Portfolio**: [[Tracking - Master_Agent_Registry]] - Complete agent tracking table
 - **💡 Brainstorm Ideas**: Use `/agent-development-lab` → "Activate Agent-Idea-Developer for rapid ideation"
 - **🔧 Develop Specs**: Use Agent-Idea-Developer sub-agent for MVP specification development
 - **📊 Pipeline Review**: Weekly status progression and prioritization analysis
@@ -27,7 +27,7 @@
    - Immediate registry addition with basic effort/value estimates
 
 2. **Registry Management**
-   - Add concepts to [[Master_Agent_Registry]] table
+   - Add concepts to [[Tracking - Master_Agent_Registry]] table
    - Status starts at 💡 Concept
    - Link to placeholder specification pages
    - Weekly cleanup and refinement

@@ -99,4 +99,4 @@
 ## Related
 - [[Morpheus_Agent_Platform_Plan]] - Organized framework derived from this brainstorm
 - [[AI_Agent_Development_Hub]] - Agent development coordination
-- [[Master_Agent_Registry]] - Agent tracking and status
+- [[Tracking - Master_Agent_Registry]] - Agent tracking and status
