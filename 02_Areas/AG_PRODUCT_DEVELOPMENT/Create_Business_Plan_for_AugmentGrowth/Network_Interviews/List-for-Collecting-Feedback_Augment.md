@@ -10,6 +10,14 @@
 10. Tim Dalrymple+
 11. Derek Steer+
 12. Alex Malek
+13. Brett Browman
 
 **Also fits target audience*
 +Potential collab/partnership
+
+People who want to be kept in the loop:
+1. Chuka
+2. Kevin Young
+3. Jason Zhu
+4. David Johnson
+5. John Garguilo

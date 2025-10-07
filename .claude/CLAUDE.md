@@ -31,6 +31,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 - **Maximum folder depth**: 3 levels to prevent information burial
 - **Hybrid approach**: Use folders for categories, tags for detailed classification and cross-referencing
 - **Proactive maintenance**: Automatically create `[[wiki-style links]]`, apply tags, manage todos with checkbox syntax
+- **Project Progress Tracking**: Check for `PROJECT_PROGRESS.md` in active project folders when resuming work - use `/project-update` command to update after significant decisions or work sessions
 
 ### Tagging System (Reference TAGS.md for full rules)
 

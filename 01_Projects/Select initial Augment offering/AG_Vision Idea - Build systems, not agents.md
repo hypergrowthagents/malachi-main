@@ -4,4 +4,4 @@ Then rather than building one off agents, I can start to build the foundations a
 
 Example: a creative stack that goes from insight to concept to production to test
 
-Service would include developing (in a standardized way of things I’d already built), implementing, customizing, and training. Can even include external tech.
+Service would include developing (in a standardized way of things I’d already built), implementing, customizing, and training. Can even include external tech/3rd party tools.
