@@ -1,0 +1,187 @@
+{
+  "name": "Edit Image Nanobanana Tool",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {"name": "imageTitle"},
+            {"name": "imagePrompt"},
+            {"name": "imageID"},
+            {"name": "telegramID"}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [320, 0],
+      "id": "caf09aee-7429-4ac7-b763-395e13d10338",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.imgbb.com/1/upload",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {"parameterType": "formBinaryData", "name": "image", "inputDataFieldName": "data"}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [624, 0],
+      "id": "2b2a625c-22ab-4512-929c-27faa4ace83b",
+      "name": "Get URL",
+      "credentials": {
+        "httpQueryAuth": {"id": "udoGuRoFJyjgwOhO", "name": "IMGBB"}
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {"__rl": true, "value": "={{ $json.imageID }}", "mode": "id"},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [496, 0],
+      "id": "b40df4d7-fa8a-4559-8169-265c04c5036f",
+      "name": "Download file",
+      "credentials": {
+        "googleDriveOAuth2Api": {"id": "V2ewjiHO0o6xhQ2R", "name": "nateherk88@gmail.com"}
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/nano-banana/edit",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n \"prompt\": \"{{ \n $('When Executed by Another Workflow').item.json.imagePrompt.replace(/\\\"/g, '\\\\\\\"').replace(/(\\r\\n|\\n|\\r)/g, '\\\\n') }}\",\n \"image_urls\": [\n \"{{ $json.data.url }}\"\n ],\n \"num_images\": 1,\n \"output_format\": \"jpeg\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [800, 0],
+      "id": "2b5a5adc-b7d4-451b-bf80-d1d9298a1803",
+      "name": "Create Image",
+      "credentials": {"httpHeaderAuth": {"id": "LluWAMqyyzTKs2nn", "name": "Fal"}}
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $json.request_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1056, 0],
+      "id": "e9c1c69d-8564-42fa-8c00-20bab092c0f9",
+      "name": "Get Result",
+      "credentials": {"httpHeaderAuth": {"id": "LluWAMqyyzTKs2nn", "name": "Fal"}},
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c66c7c13-57ca-4191-9af3-5ab306dfedfc",
+              "name": "Response",
+              "value": "=The image was created and named \"{{ $json.name }}\". \n\nHere is the link to the image in Google Drive: {{ $json.webViewLink }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1552, 0],
+      "id": "960df26f-5ca2-4296-820a-9764c16020d0",
+      "name": "Result"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.images[0].url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1264, 0],
+      "id": "c3f956fc-dd1d-4ab9-b60c-46617b2b2c0e",
+      "name": "Download Image"
+    },
+    {
+      "parameters": {"amount": 10},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [928, 0],
+      "id": "8627d7a4-e774-4d08-b903-f125861b02e5",
+      "name": "10 Seconds",
+      "webhookId": "caad73e3-58d8-4fbd-a3e9-c42424f2d1ee"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('When Executed by Another Workflow').item.json.imageTitle }}",
+        "driveId": {"__rl": true, "mode": "list", "value": "My Drive"},
+        "folderId": {
+          "__rl": true,
+          "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+          "mode": "list",
+          "cachedResultName": "AI Image Generation",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [1408, 0],
+      "id": "51d2d1bd-3b11-4860-913e-8c7b6d541566",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {"id": "V2ewjiHO0o6xhQ2R", "name": "nateherk88@gmail.com"}
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.telegramID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1680, 0],
+      "id": "c52e7f81-1065-4125-8bc5-653a1b7dcc60",
+      "name": "Send a photo message",
+      "webhookId": "a67b9c43-8cbe-4859-b6bc-19c98d63e038",
+      "credentials": {
+        "telegramApi": {"id": "9jQWan3cOz3tE62s", "name": "Telegram account 2"}
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get URL": { "main": [[{"node": "Create Image", "type": "main", "index": 0}]] }
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "versionId": "512559fc-61c2-4973-9506-f45a864eaac2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "95e5a8c2e51c83e33b232ea792bbe3f063c094c33d9806a5565cb31759e1ad39"
+  },
+  "id": "WM3g2X71QC2iY769",
+  "tags": []
+}
+

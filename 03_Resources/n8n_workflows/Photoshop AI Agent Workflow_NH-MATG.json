@@ -1,0 +1,902 @@
+{
+  "name": "Nano/Veo Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -256,
+        16
+      ],
+      "id": "57d29a9d-81a4-400f-96c6-464f58d1cb59",
+      "name": "Telegram Trigger",
+      "webhookId": "bea4843e-25e4-4d89-b3f6-4237798e9b42",
+      "credentials": {
+        "telegramApi": {
+          "id": "9jQWan3cOz3tE62s",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e7211e46-0f49-46a0-9cb7-e83fed150efd",
+                    "leftValue": "={{ $json.message.photo }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "array",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Photo"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "id": "85edf561-8f5e-4215-9e19-78ff0392068e"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Text"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -128,
+        16
+      ],
+      "id": "912b4b1b-e98d-4670-b8c2-1fd7e075d842",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[1].file_id }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        32,
+        -48
+      ],
+      "id": "76e37e51-46a0-4378-81ad-66070c95703b",
+      "name": "Download File",
+      "webhookId": "fb18f65f-c1cf-4473-b59d-d59d6b96e9ea",
+      "credentials": {
+        "telegramApi": {
+          "id": "9jQWan3cOz3tE62s",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "={{ $now.format('yyyy-MM-dd') }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1Fm7PN1nMICKnAZpf6-3YYrSJlBEQ7Xbe",
+          "mode": "list",
+          "cachedResultName": "Pictures",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Fm7PN1nMICKnAZpf6-3YYrSJlBEQ7Xbe"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        160,
+        -48
+      ],
+      "id": "c7449b79-2e12-41a8-86d8-e933be97b353",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "V2ewjiHO0o6xhQ2R",
+          "name": "nateherk88@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "53de4eb0-6684-48f5-a5b5-2b3bedaff817",
+              "name": "message.text",
+              "value": "=The user just submitted a picture. Here is the ID of that file in Google Drive: {{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        288,
+        -48
+      ],
+      "id": "cb54336b-8c0c-4425-ad55-4bf59d20d6e9",
+      "name": "Set Text"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "claude-3-5-sonnet-20241022",
+          "mode": "list",
+          "cachedResultName": "Claude Sonnet 3.5 (New)"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        -112,
+        304
+      ],
+      "id": "7a814cb4-0868-4992-b304-eb5fc97e272e",
+      "name": "Sonnet 3.5",
+      "credentials": {
+        "anthropicApi": {
+          "id": "iEsH2oywXIJiWHnM",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=# Overview\nYou are a personal assistant agent. Your job is to use the tools you have access to help the user with their request. \n\n## Tools\nChange Name - Use this tool to change the name of a photo. You must have the file ID to change the name.\nCombine Images - Use this tool to combine two images.\nEdit Image - Use this tool to edit an image. When using this tool, you must describe that you want to edit the source image provided.\nImage to Video - use this tool to turn an image into a video. \nSearch Raw Files - Use this tool to search for image files that the user has previously uploaded.\nSearch AI Images - Use this tool to search for AI-generated images that you've helped the user create. \n\n## Instructions\n1) If the user submits a photo, ask them what to name that photo by saying \"What would you like me to name that photo in your Google Drive?\". Then once they respond, change the name using your Change Name tool.\n2) Do not ask clarification questions, just do as the user asks.\n\n## Visual Ad Prompting Rules\n- When generating images or videos for advertisements, always structure your prompts to achieve studio-grade, hyper-realistic results:\n- Camera\n- Lighting\n- Composition\n- Realism\n- Subject\n- Quality\n- Style References\n- For Video: Emphasize first-frame quality, camera motion, pacing, animation style, and audio (voiceover, music, SFX, captions).\n- Always follow this structure to ensure predictable, professional, ad-ready outputs.\n",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        480,
+        -48
+      ],
+      "id": "8176be25-5569-4bbd-a3b7-fca2ebd65e17",
+      "name": "Photoshop Agent",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        768,
+        -48
+      ],
+      "id": "f456a297-2f00-4515-90e2-83210c4783af",
+      "name": "Respond",
+      "webhookId": "f9df111e-1004-4aff-b458-779444006ed8",
+      "credentials": {
+        "telegramApi": {
+          "id": "9jQWan3cOz3tE62s",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('File_to_Update', ``, 'string') }}"
+        },
+        "newUpdatedFileName": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('New_Updated_File_Name', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDriveTool",
+      "typeVersion": 3,
+      "position": [
+        160,
+        304
+      ],
+      "id": "80bbf81a-309c-49e0-97f9-e09bf5a8c4c3",
+      "name": "Change Name",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "V2ewjiHO0o6xhQ2R",
+          "name": "nateherk88@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "description": "Call this tool to combine two images. You must pass over an image generation prompt, the IDs of both of the images, and a title for this new image.",
+        "workflowId": {
+          "__rl": true,
+          "value": "c9ZL5UMa5RWHVJ0R",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/c9ZL5UMa5RWHVJ0R",
+          "cachedResultName": "Combine Images Nanobanana"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "prompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('prompt', `The image generation prompt. This should be optimized for AI image generation, and should only reference the images as image1 and image2. This prompt should not contain \\\\n or \"\".`, 'string') }}",
+            "image1": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('image1', `The ID of image 1`, 'string') }}",
+            "image2": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('image2', `The ID of image 2`, 'string') }}",
+            "imageTitle": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imageTitle', `The title for the new image`, 'string') }}",
+            "telegramID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "prompt",
+              "displayName": "prompt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "image1",
+              "displayName": "image1",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "image2",
+              "displayName": "image2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "imageTitle",
+              "displayName": "imageTitle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "telegramID",
+              "displayName": "telegramID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.2,
+      "position": [
+        656,
+        304
+      ],
+      "id": "44f56168-23c7-4bf2-805b-0294810d451b",
+      "name": "Combine Images"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1Fm7PN1nMICKnAZpf6-3YYrSJlBEQ7Xbe",
+            "mode": "list",
+            "cachedResultName": "Media",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1Fm7PN1nMICKnAZpf6-3YYrSJlBEQ7Xbe"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {
+          "fields": [
+            "id",
+            "name",
+            "webViewLink"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDriveTool",
+      "typeVersion": 3,
+      "position": [
+        320,
+        304
+      ],
+      "id": "31b0e6d0-b761-418c-a931-d168c59b94ec",
+      "name": "Search Raw Files",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "V2ewjiHO0o6xhQ2R",
+          "name": "nateherk88@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+            "mode": "list",
+            "cachedResultName": "AI Image Generation",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {
+          "fields": [
+            "id",
+            "name",
+            "webViewLink"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDriveTool",
+      "typeVersion": 3,
+      "position": [
+        480,
+        304
+      ],
+      "id": "961c490b-6b6e-4447-ad91-486ba79c9a2f",
+      "name": "Search AI Images",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "V2ewjiHO0o6xhQ2R",
+          "name": "nateherk88@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "description": "Call this tool to edit an image. You must pass over a new image title, an image prompt, and the image ID. ",
+        "workflowId": {
+          "__rl": true,
+          "value": "WM3g2X71QC2iY769",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/WM3g2X71QC2iY769",
+          "cachedResultName": "Edit Image Nanobanana Tool"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "imageTitle": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imageTitle', `The title of the new image`, 'string') }}",
+            "imagePrompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imagePrompt', `The image generation prompt. This should be detailed and optimized for AI image generation. This prompt should not contain \\\\n or \"\".`, 'string') }}",
+            "imageID": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imageID', `The ID of the image to edit`, 'string') }}",
+            "telegramID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "imageTitle",
+              "displayName": "imageTitle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "imagePrompt",
+              "displayName": "imagePrompt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "imageID",
+              "displayName": "imageID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "telegramID",
+              "displayName": "telegramID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.2,
+      "position": [
+        800,
+        304
+      ],
+      "id": "6e822ce0-d91c-4c46-abea-e0d43f40b32c",
+      "name": "Edit Image"
+    },
+    {
+      "parameters": {
+        "content": "## AI Image Gen",
+        "height": 224,
+        "width": 288,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        624,
+        224
+      ],
+      "id": "92c2cae1-20b5-4420-b731-56ee1515c3d9",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## File Handling\n",
+        "height": 224,
+        "width": 480,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        128,
+        224
+      ],
+      "id": "c76e92c5-acb8-4ad9-be89-3055c38fb5fb",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        16,
+        304
+      ],
+      "id": "67282ae6-0c02-4e4f-a73f-6ca21b63500c",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "description": "Call this tool to create a video ad from a picture. The fields to pass over are:\n1. Google Drive file ID of the image\n2. Video prompt\n3. Name of the image",
+        "workflowId": {
+          "__rl": true,
+          "value": "5821tlVzSOLDaDTb",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/5821tlVzSOLDaDTb",
+          "cachedResultName": "Image to Video Tool"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "fileID": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('fileID', ``, 'string') }}",
+            "videoPrompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('videoPrompt', ``, 'string') }}",
+            "image": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('image', ``, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "fileID",
+              "displayName": "fileID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "videoPrompt",
+              "displayName": "videoPrompt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "image",
+              "displayName": "image",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.2,
+      "position": [
+        976,
+        304
+      ],
+      "id": "a69d27c2-8faa-42ed-976a-e07a1549e2b7",
+      "name": "Image to Video"
+    },
+    {
+      "parameters": {
+        "content": "## AI Video Gen",
+        "height": 224,
+        "width": 176,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        928,
+        224
+      ],
+      "id": "20ed34e0-aef4-4ae5-bee0-1d095c3f4279",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-5",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        304
+      ],
+      "id": "5e94e9b6-99df-4b3b-9137-f5b048b61279",
+      "name": "GPT 5",
+      "credentials": {
+        "openRouterApi": {
+          "id": "td3utRybtI5wRRtH",
+          "name": "OpenRouter account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🛠️ Setup Guide  \n**Author:** [Nate Herk](https://www.youtube.com/@nateherk)\n\nFollow the steps below to get this Photoshop agent workflow up and running:\n\n### ✅ Step 1: Import AI Image Generation Tool Workflows  \nImport the following two supporting workflows and ensure they’re properly linked to the AI image generation nodes inside the Photoshop agent:  \n- **Combined Images Tool**  \n- **Edit Image Tool**  \n- **Image to Video Tool**\n\nYou should organize these in a separate utility workflow and verify that all execute workflow nodes are properly connected.\n\n### ✅ Step 2: Connect Your Chat Model  \nChoose your preferred chat model provider (e.g., [OpenRouter](https://openrouter.ai/), [Anthropic](https://console.anthropic.com/), or [OpenAI](https://platform.openai.com/)) and plug it into the brain of the agent. This powers the primary reasoning engine.\n\n### ✅ Step 3: Connect Your Telegram Credentials  \nHook up your Telegram bot credentials so the agent can receive image generation requests and respond directly within Telegram.\n\n### ✅ Step 4: Connect Your Google Drive Credentials  \nUse your Google credentials to let the agent access files and folders—handy for uploading results or reading prompts.\n\n### ✅ Step 5: Configure Tool Credentials  \nInside both the Combined Images and Edit Image tools, configure:  \n- Your **[ImgBB](https://imgbb.com/)** API Key  \n- Your **[Fal.AI](https://fal.ai/)** API Key  \n\nThese are required to upload and edit images through the respective APIs.\n\n### 💡 Final Step: Start Testing and Tweaking  \nOnce everything is wired up, start prompting your agent and watch it bring your image prompts to life. Customize the system prompts or add new logic to fine-tune it to your needs.\n",
+        "height": 848,
+        "width": 944
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1264,
+        -144
+      ],
+      "id": "cc54f335-fb8f-4927-80cf-c652160a87bf",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## Text/Image Input",
+        "height": 352,
+        "width": 720,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -304,
+        -144
+      ],
+      "id": "fe55db47-a642-4f20-bc3a-89980951a59e",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## Photoshop Agent",
+        "height": 352,
+        "width": 480,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        432,
+        -144
+      ],
+      "id": "00c3af9c-516b-4a19-a8ef-a0b4754b4408",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "## Brain",
+        "height": 224,
+        "width": 416,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -304,
+        224
+      ],
+      "id": "9824be4d-52b2-41db-81f6-bd29429ae0c1",
+      "name": "Sticky Note6"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "node": "Set Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Text": {
+      "main": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sonnet 3.5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Photoshop Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Change Name": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Images": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Raw Files": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search AI Images": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image to Video": {
+      "ai_tool": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT 5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Photoshop Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0ed55af7-4314-4396-a324-6427b6eadd41",
+  "meta": {
+    "instanceId": "95e5a8c2e51c83e33b232ea792bbe3f063c094c33d9806a5565cb31759e1ad39"
+  },
+  "id": "wzuEWi5gUawEeLYN",
+  "tags": []
+}

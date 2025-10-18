@@ -1,0 +1,51 @@
+- Client: Sage Health (hellosage.com)
+- Provides care providers/families a system for how to keep track of loved ones (e.g. health updates) on how they are doing.
+- Series B - raised $35m recently and raised $60m to date. They have the money and know they need to scale
+- Client contact wants to work with David is their new CMO (she is a part of a community with David called Sunday Dinner)
+- The ask:
+	- Have a competitor who just announced $100m in funding, which caused them to want to go back into fundraising
+	- Investors they've been reaching out to aren't that aware of them (their marketing is lacking)
+	- The competitor product is not as fast or well regarded, but their marketing is ahead
+- They just hired a Head of Content, who is just getting up to speed
+- They plan to kick off a product marketing campaign around their fall detection, to get awareness around the product they have
+- They want investors to see this campaign too in order to boost awareness
+	- David thinks the primary motivation for Sage is for investors to see it, with a secondary goal being customer acquisition
+- They need help with a GTM to get the word out
+- Sage doesn't have a huge budget for paid acq (e.g. we are not going to spend $100k on LinkedIn on this), but they will do it incrementally and then grow what works; e.g. a scrappy test
+	- David thinks we'd create a funnel - market the product with a CTA to learn more, get interest signals
+- Potential areas of collaboration:
+	- Specific ask: Helping align on how to scale a program with paid amplification
+		- David: figures out what content to create and how to distribute it
+	- David wants to use my systematic approach to developing strategy and testing distribution approaches
+		- Help figure out whether this should be paid ads or influencers
+		- Help manage the execution of the paid program, bring in the right resources to manage it or manage it myself
+	- Ancillary: Create an AI system that can be scaled internally for content specifically (content creation, library of creative assets for ads)
+		- Using agents for our work while getting paid for it
+- Personas of their target marketing
+	- Investors
+	- People in their mid-life, thinking about what type of home their parents should go to
+	- Late life people who are thinking about this for themselves
+	- Care home professionals
+		- Property Managers, managers, investors
+		- **Summary:**  The population size of target managers/property owners for a solution like Sage Health is likely **40,000–50,000 across the U.S.** This number may be higher when including small multi-site operators, but most buyers run a single community or a small group, aligning with Sage’s customer base.
+- Malachi Quick Thoughts
+	- For Consumers
+		- Do paid influencer marketing + paid ad boosting
+		- Drive to free content pieces with customized landing page funnels
+		- Get them to engage with content
+	- For home professionals
+		- The audience is too small, so we might need to reach them indirectly = retargeting
+- Need them to define what success looks like for this campaign:
+	- Is it to drive awareness?
+	- Is it to create content materials for sales?
+- Proposal:
+	- Put together the things we would do and the cost
+	- They want us to put together an outline of what the approach would be and the cost
+- Next steps:
+	- David will send her clarifying questions: What are the 5-6 questions we would need in order to put together a proposal for this?
+		- Goals/objectives?
+		- Success outcomes?
+		- Target audience for this campaign?
+		- Existing creative assets? Ability to generate landing pages?
+		- Budget max?
+	- Develop a short proposal

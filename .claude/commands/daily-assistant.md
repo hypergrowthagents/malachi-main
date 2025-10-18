@@ -13,13 +13,33 @@ Comprehensive daily planning workflow that integrates weekly priorities, calenda
 - Load context about project interdependencies
 
 ### 2. Accomplishment Review & Accountability
-**Multi-source progress analysis:**
-- Review `00_Inbox/2025/DailyPlanning/` files for previous planning and completion
-- Analyze calendar events from past week to see what actually got done
-- Check for any `@eowrecaps` folder items (end-of-week/day recaps)
-- **Ask accountability questions** unless already answered in recap documents:
-  - "Looking at your planned focus items from [last planning date], what got completed vs. what didn't?"
-  - "What obstacles or insights emerged that we should factor into today's planning?"
+**Multi-source progress analysis with automatic retrospective capture:**
+
+**FIRST: Check if starting a new week (Monday or first planning day of week):**
+- Load most recent weekly planning doc from `00_Inbox/2025/WeeklyProjectPlanning/`
+- **Check for "Week in Review" section** - does it exist and is it populated?
+
+**IF "Week in Review" is MISSING or EMPTY:**
+- "Before we plan this week, let's capture last week's retrospective."
+- Review daily planning docs from previous week
+- Ask: "Looking at last week ([dates]), what were your:
+  - Major accomplishments and wins?
+  - What worked well (patterns, strategies, decisions)?
+  - Challenges and obstacles encountered?
+  - Key learnings about your productivity and planning?"
+- **Update previous week's planning doc** with "Week in Review" section
+- **Extract patterns into `02_Areas/PERSONAL_SYSTEMS/Daily_Planning_Insights.md`**
+- Present summary: "Week in review captured. Key insight: [highlight 1-2 patterns]"
+
+**IF "Week in Review" is COMPLETED:**
+- "I see you completed last week's retrospective on [date]. Key insights: [1-2 sentence summary]"
+- Reference those insights in today's planning
+
+**THEN: Daily accountability:**
+- Review `00_Inbox/2025/DailyPlanning/` files for yesterday's planning and completion
+- Analyze calendar events to see what actually got done
+- Ask: "Looking at yesterday's plan, what got completed vs. what didn't?"
+- Note any obstacles or insights for today's planning
 
 ### 3. Current Schedule Analysis
 **Calendar-first approach:**
@@ -65,12 +85,12 @@ Comprehensive daily planning workflow that integrates weekly priorities, calenda
   - Links to relevant project folders and resources
 - Format based on established daily planning template structure
 
-### 8. Learning Insights Capture
-**Continuous improvement integration:**
-- Ask: "Based on how yesterday/this week went, what's one insight about your productivity patterns we should remember?"
-- Document insights in `02_Areas/PERSONAL_SYSTEMS/Daily_Planning_Insights.md`
-- Apply learnings to today's planning (e.g., energy patterns, task duration estimates, obstacle patterns)
-- Set up tomorrow's accountability by noting specific commitments being made
+### 8. Learning Insights Capture (Weekly Pattern Synthesis Only)
+**Weekly pattern extraction - NOT daily:**
+- This step is now integrated into Step 2's weekly retrospective check
+- Pattern synthesis happens ONCE per week (when "Week in Review" is captured)
+- Daily planning references existing insights but doesn't create new ones
+- Set up tomorrow's accountability by noting specific commitments being made in today's plan
 
 ## Example Questions Flow
 

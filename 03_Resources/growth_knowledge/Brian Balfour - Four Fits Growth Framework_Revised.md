@@ -1,7 +1,7 @@
 https://blog.brianbalfour.com/p/the-four-fits-a-growth-framework
 ## Quick Recap of Four Fits:
 
-![[3796e2b4-8f10-47b5-80f5-065612135fe8_3840x2160.png]]
+![[Brian_Balfour_Four_Fits_Framework.png]]
 
 Successful products require alignment across four distinct but interconnected dimensions. These are the Four Fits:
 

@@ -53,4 +53,28 @@ Next after that, if there's time:
 
 **Re-evaluation of List:**
 
-- 
+-
+
+---
+
+### Week in Review
+
+*Completed at end of week (Friday) or start of next week (Monday) via /daily-assistant or chief-of-staff agent*
+
+**Major Accomplishments:**
+-
+
+**What Worked Well:**
+-
+
+**Challenges & Obstacles:**
+-
+
+**Key Learnings:**
+-
+
+**Carry Forward to Next Week:**
+-
+
+**Pattern Insights:**
+-

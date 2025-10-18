@@ -1,11 +1,89 @@
 # Daily Planning Insights & Learning Repository
 
-*Continuous improvement tracking for daily productivity optimization*
+*Continuous improvement tracking for productivity optimization - Updated WEEKLY*
 
 ---
 
 ## Purpose
-This document captures productivity patterns, energy optimization discoveries, and process improvements to enhance the daily planning workflow. The chief-of-staff agent references this information to provide increasingly personalized and effective planning recommendations.
+This document captures productivity patterns, energy optimization discoveries, and process improvements to enhance the daily planning workflow. Insights are synthesized **weekly** (not daily) from daily planning docs and retrospectives. The chief-of-staff agent references this information to provide increasingly personalized and effective planning recommendations.
+
+**Update Frequency:** Weekly (via /daily-assistant or chief-of-staff week-in-review)
+**Data Sources:** Daily planning docs, weekly retrospectives, calendar analysis
+
+---
+
+## Weekly Pattern Synthesis
+
+*Add new entries at the top - most recent first*
+
+### Week of 2025-10-07 to 2025-10-10 (4-day week, Monday holiday)
+
+**Accomplishments:**
+- **DMS Proposal execution excellence**: Delivered high-quality proposal + extras (template, subagent) in 2.5 hours when scope was clear
+- **Network validation progress**: Multiple feedback calls (David Johnson 2x, Wyatt Ozmore) surfaced new opportunities
+- **Calendar discipline maintained**: 10+ hours of protected focus blocks across week despite internal confusion
+- **Strategic advice captured**: Derek Steer conversation on 10/14 provided clarity on customer-first approach
+
+**Time Estimation Patterns:**
+- **Strategic vs execution work divergence**: DMS proposal (clear scope) = 2.5 hours; AG pitch (ambiguous scope) = 2 weeks spinning
+- **Decision clarity is the bottleneck**: When work involves making decisions (not just executing), time blocks don't function the same way - decision paralysis can expand work infinitely
+- **Consistent underestimation of strategic work**: Pitched deadlines for AG pitch (10/7, then 10/8) but neither were realistic without decision clarity first
+- **Execution capability validated**: When scope is clear, time estimation is accurate and delivery is fast + quality
+
+**Energy Optimization:**
+- **Calendar discipline works even in confusion**: Even during analysis paralysis week, successfully blocked and protected high-energy focus time
+- **Energy drain from uncertainty discovered**: Motivation and energy were "sapped" when direction unclear - confidence and clarity act as energy multipliers (or drains)
+- **High-energy blocks used but not productive**: Had focus time scheduled, but spent it on strategy iteration rather than concrete output - time blocking without clarity just creates scheduled confusion
+- **Intentional low-energy work**: Considered using LOW energy period for simple pitch creation (forces simplicity, prevents overthinking)
+
+**Obstacles Encountered:**
+- **Analysis paralysis on service definition**: Multiple service line iterations (v5 → v6) without customer validation created spinning loop
+- **Perfectionism blocking progress**: Both AG pitch and agent prioritization deferred due to wanting to "get it right" first
+- **Strategy work masquerading as progress**: Significant time spent on refinement, research, and iteration felt productive but didn't move toward customer conversations
+- **Derek's advice came late**: Customer-first framework received on 10/14 could have prevented entire week of spinning if received earlier
+
+**Process Improvements:**
+- **Two types of consulting work identified**: (1) Clear scope = fast execution model; (2) Unclear scope = slow iteration model - need to recognize which type you're in and manage accordingly
+- **Week-in-review synthesis valuable**: Retrospective revealed patterns not visible day-to-day (execution ability proven, decision clarity was real blocker)
+- **Derek's simplification framework**: "Find customer first, worry about delivery later" cuts through complexity - position as growth consulting, differentiate with AI
+- **Action-forcing constraints**: Setting timers (90 min max for pitch), using low-energy periods for simple tasks, forcing shipping imperfect work
+
+**Application for Next Week:**
+- **Customer conversations over strategy refinement**: Stop perfecting pitch, start having conversations (Derek's advice)
+- **Time-box strategic work aggressively**: Set hard limits (90 min) on decision-making work to prevent infinite expansion
+- **Recognize fake work**: Strategy iteration without customer validation is preparation, not progress
+- **Use calendar for accountability**: What gets scheduled gets measured - calendar blocks reveal what actually happened vs what was "worked on"
+- **Leverage execution strength**: You can deliver fast and well when scope is clear - the opportunity is in getting to clarity faster through customer conversations
+- **Smaller actions over perfect plans**: Build brick by brick, capture learnings, adapt - flexibility over perfection (own advice to self)
+
+### Week of [Date Range] - Template for New Entries
+
+**Accomplishments:**
+- [Major wins and completed projects from the week]
+
+**Time Estimation Patterns:**
+- [Tasks that took longer than expected and why]
+- [Tasks completed faster than expected]
+- [Accuracy improvements or persistent estimation gaps]
+
+**Energy Optimization:**
+- [What worked for high/low energy alignment]
+- [Misalignments discovered and corrections needed]
+- [Energy pattern discoveries]
+
+**Obstacles Encountered:**
+- [Recurring blockers and how they were addressed]
+- [New challenges that emerged]
+- [External factors affecting productivity]
+
+**Process Improvements:**
+- [Workflow optimizations discovered]
+- [Tool/system adjustments that helped]
+- [Planning techniques that proved effective]
+
+**Application for Next Week:**
+- [Specific adjustments to make in future planning]
+- [Patterns to watch for or leverage]
 
 ---
 
@@ -20,7 +98,37 @@ This document captures productivity patterns, energy optimization discoveries, a
 - **12:00pm-2:30pm**: Post-lunch dip, ideal for lunch, walks, email, admin tasks
 - **After 5:00pm**: Wind-down time, routine activities, personal tasks
 
-### Discovered Patterns
+### Week of 2025-09-22 to 2025-09-28
+
+**Accomplishments:**
+- Completed ICP definition, pain points analysis, and pricing strategy research
+- All three major research outputs delivered (though financial model pushed to following week)
+
+**Time Estimation Patterns:**
+- Research and discovery work consistently took 25-50% longer than initially estimated
+- Foundational business element development (ICP, pricing) required more depth than anticipated
+- Full allocated time blocks were consumed plus additional overflow
+
+**Energy Optimization:**
+- First day back after 7-day gap - structured planning helped regain focus
+- Pre-break urgency (Thu-Fri break upcoming) created good momentum
+
+**Obstacles Encountered:**
+- Underestimated complexity of financial model integration with research outputs
+- 7-day planning gap created some context-switching overhead on return
+
+**Process Improvements:**
+- Weekly project structure maintained progress despite daily planning gap
+- Calendar-first approach helped prevent overcommitment
+
+**Application for Next Week:**
+- Add 25-50% buffer to research/discovery tasks
+- Front-load complex work when breaks are approaching
+- Maintain weekly planning even during daily planning gaps
+
+---
+
+### Discovered Patterns (Legacy Format - Migrate Above)
 **Date**: 2025-09-24
 **Context**: First day back to structured daily planning after 7-day gap, last work day before Thu-Fri break
 **Insight**: Research and discovery work consistently takes longer than initially estimated - ICP definition, pain points, and pricing strategy took full allocated time plus additional
@@ -128,21 +236,28 @@ This document captures productivity patterns, energy optimization discoveries, a
 
 ---
 
-## Learning Capture Template
+## How to Use This Document
 
-*Use this format when adding new insights:*
+**For /daily-assistant command:**
+- Step 2 checks for weekly retrospective completion
+- If missing, prompts for week-in-review and updates this doc
+- References existing insights when planning new week
 
-**Date**: YYYY-MM-DD
-**Context**: [Brief situation description]
-**Insight**: [Key learning or pattern observed]
-**Application**: [How this can improve future planning]
-**Validation**: [Evidence that supports this insight]
+**For chief-of-staff agent:**
+- Can be invoked for on-demand week-in-review
+- Synthesizes patterns from daily planning docs
+- Updates this document with weekly synthesis entries
+
+**For manual updates:**
+- Add new weekly synthesis entries at top of "Weekly Pattern Synthesis" section
+- Use template format for consistency
+- Focus on actionable insights, not just activity logs
 
 ---
 
 *Created: 2025-09-24*
-*Last Updated: 2025-09-24*
-*Maintained by: Chief-of-staff agent via daily planning workflow*
+*Last Updated: 2025-10-14*
+*Maintained by: Chief-of-staff agent via weekly retrospective workflow*
 
 ## Tags
 #personal-systems #productivity-insights #daily-planning #energy-patterns #continuous-improvement #chief-of-staff #workflow-optimization

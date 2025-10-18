@@ -1,0 +1,11 @@
+{
+	"id": "granola-sync",
+	"name": "Granola Sync",
+	"version": "1.6.3",
+	"minAppVersion": "1.6.6",
+	"description": "Sync your Granola AI notes to your vault with customizable settings.",
+	"author": "Danny McClelland",
+	"authorUrl": "https://github.com/dannymcc/",
+	"fundingUrl": "",
+	"isDesktopOnly": true
+}

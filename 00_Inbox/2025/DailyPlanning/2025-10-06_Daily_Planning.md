@@ -104,7 +104,7 @@
 
 **Active This Week:**
 - [[01_Projects/Proposal - DMS/]] - Interview done, proposal tomorrow
-- [[01_Projects/Select initial Augment offering/Service_Offerings_Alternatives_v1]] - New exploration
+- [[Service_Offerings_Alternatives_v1]] - New exploration
 - [[01_Projects/Select initial Augment offering/]] - Pitch draft this week
 - [[02_Areas/AG_PRODUCT_DEVELOPMENT/Create_Business_Plan_for_AugmentGrowth/Network_Interviews/]] - Validation calls needed
 
